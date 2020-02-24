@@ -1,0 +1,40 @@
+/* 公共样式 */
+@import url(../common/color.css);
+@import url(../common/header.css);
+@import url(../common/footer.css);
+@import url(../basic/custom.css);
+
+/* 字体 */
+@import url(../../font/iconfont.css);
+
+
+
+/* 私有样式 */
+@import url(../pages/index.css);
+@import url(../pages/about.css);
+
+
+
+/* 公共类 */
+
+/* 中间 */
+.center {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.main {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 315px!important;
+    margin-top: 30px;
+}
+
+.visible {
+    overflow: visible;
+}
+
+body {
+    border-bottom: transparent solid 1px;
+}

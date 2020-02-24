@@ -1,0 +1,106 @@
+.about .center {
+    overflow: visible !important;
+}
+
+.about .abt-img {
+    width: 100%;
+    background-color: green;
+    margin-bottom: 20px;
+    margin: 30px 0 50px 0;
+}
+
+.about .abt-left {
+    float: left;
+    height: 436px;
+    box-shadow: 0px 0px 10px rgba(242, 242, 242, 1);
+    border: 1px solid rgba(242, 242, 243, 1);
+    width: 218px;
+    text-align: left;
+    color: #000;
+    font-size: 16px;
+}
+
+.about .abt-left>div {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    color: white;
+    font-size: 22px;
+    background-color: #1156A4;
+    text-align: center;
+}
+.about .abt-left>div span {
+    font-size: 35px;
+    vertical-align: middle;
+    margin-top: -5px;
+    display: inline-block;
+}
+/* 小点 */
+.abt-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: rgba(225,225,225);
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+.about .abt-left li {
+    padding: 15px 20px;
+}
+.about .abt-left li.active,
+.about .abt-left li:hover {
+    background-color: #03a9f4;
+}
+.about .abt-left li.active a,
+.about .abt-left li:hover a {
+    color: white;
+}
+.about .abt-left li:hover .abt-dot,
+.about .abt-left li.active .abt-dot{
+    background-color: white;
+}
+.about .abt-left li a {
+    color: #212121;
+}
+/* 右边 */
+.about .abt-right {
+    float: right;
+    width: 893px;
+    padding: 20px 20px;
+    border: 1px solid rgba(242, 242, 243, 1);
+    box-shadow: 0px 0px 20px rgba(242, 242, 242, 1);
+}
+.about .abt-right>ul {
+    display: none;
+}
+.about .abt-right>.active {
+    display: block;
+}
+.about .abt-right .abt-top {
+    width: 100%;
+    border-bottom: 1.2px solid rgba(242, 242, 243, 1);
+    height: 60px; 
+    line-height: 60px;
+    color: #D02209;
+    font-size: 22px;
+}
+
+.about .abt-right .abt-top>h1 {
+    padding: 0 30px 0 10px;
+    border-bottom: 2px solid #D02209;
+    height: 100%;
+    display: inline-block;
+    font-size: 22px;
+}
+.about .abt-right .abt-content {
+    font-size: 18px;
+    line-height: 200%;
+    font-family: 楷体;
+    color: #707070;
+    letter-spacing: 0px;
+    padding: 20px;
+}
+.about .abt-right .abt-content>p {
+    text-indent: 72px;
+}

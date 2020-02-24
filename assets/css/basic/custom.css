@@ -1,0 +1,277 @@
+html,body {
+    max-width: 100%;
+    max-height: 100%;
+    /* background-color: white; */
+    position: relative;
+}
+
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input,
+ textarea, select, p, dl, dt, dd, a, img, button, form,
+  table, th, tr, td, tbody, article, aside, details, 
+  figcaption, figure, footer, header, hgroup, menu, nav, section {
+       /*去除默认边距*/
+    padding: 0;
+    margin: 0;
+    /*设置盒子模型*/
+    box-sizing: border-box;
+    /*去除移动端特有默认点击高亮效果*/
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: top;
+  }
+
+
+
+
+body {
+    font: 14px Arial, sans-serif;
+    color: #666666;
+}
+
+
+/* 重置加粗效果 */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+
+/*清除a标签的默认样式，*/
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: #666666;
+}
+
+
+/*清除ul标签的默认样式*/
+
+ul {
+    list-style: none;
+}
+
+
+/*清除input标签的默认样式*/
+
+input,
+button,
+select,
+textarea {
+    outline: none;
+    border: 1px solid transparent;
+}
+
+
+/* textarea文本域光标在第一行第一列显示，只需要把textarea标签闭合 如<textarea></textarea> */
+
+
+/* 清除默认样式 */
+
+b,
+strong {
+    font-weight: normal;
+}
+
+ins,
+s,
+del,
+u {
+    text-decoration: none;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+
+/* 图片清除底部空白间距 */
+
+img {
+    vertical-align: top;
+}
+
+
+/* 表格的默认样式 */
+
+table {
+    border-collapse: collapse;
+}
+
+table th {
+    font-weight: normal;
+}
+
+/* 按钮默认手 */
+button {
+    cursor: pointer;
+}
+
+
+/*需要添加的新样式*/
+
+
+/*浮动*/
+
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+
+/*外边距*/
+
+.m_left10 {
+    margin-left: 10px;
+}
+
+.m_right10 {
+    margin-right: 10px;
+}
+
+.m_top10 {
+    margin-top: 10px;
+}
+
+.m_bottom {
+    margin-bottom: 10px;
+}
+
+
+/*内边距*/
+
+.p_left10 {
+    padding-left: 10px;
+}
+
+.p_right10 {
+    padding-right: 10px;
+}
+
+.p_top10 {
+    padding-top: 10px;
+}
+
+.p_bottom10 {
+    padding-bottom: 10px;
+}
+
+
+/*字体颜色*/
+
+.c_white {
+    color: white;
+}
+
+.c_gray {
+    color: gray;
+}
+
+
+/*背景颜色*/
+
+.bgc_red {
+    background-color: red;
+}
+
+.bgc_orange {
+    background-color: orange;
+}
+
+.bgc_yellow {
+    background-color: yellow;
+}
+
+.bgc_green {
+    background-color: green;
+}
+
+.bgc_cyan {
+    background-color: cyan;
+}
+
+.bgc_blue {
+    background-color: blue;
+}
+
+.bgc_purple {
+    background-color: purple;
+}
+
+.bgc_white {
+    background-color: white;
+}
+
+.bgc_black {
+    background-color: black;
+}
+
+
+/*清除浮动*/
+
+.clearfix::after {
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearLeft::after {
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: left;
+}
+
+.clearRight::after {
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: right;
+}
+
+
+/*边框*/
+
+.b_left {
+    border-left: 1px solid #c5c5c5;
+}
+
+.b_right {
+    border-right: 1px solid #c5c5c5;
+}
+
+.b_top {
+    border-top: 1px solid #c5c5c5;
+}
+
+.b_button {
+    border-bottom: 1px solid #c5c5c5;
+}
+
+
+/*中间对齐*/
+
+.v_middle {
+    vertical-align: bottom;
+    display: inline-block;
+}
+
+.input::-webkit-input-placeholder {
+    color: #dcdcdc;
+    font-size: 26px;
+}
+

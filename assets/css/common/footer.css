@@ -1,0 +1,81 @@
+
+.footer {
+    width: 100%;
+    overflow: hidden;
+    background-color: #363636;
+    height: 265px;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+}
+.footer a {
+    color: white!important;
+}
+.footer .ft-top {
+    width: 100%;
+    height: 230px;
+    padding-top: 40px;
+}
+.footer .ft-top>.ft-left {
+    float: left;
+    width: 42%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-right: 1px solid #555555;
+    padding-right: 50px;
+}
+.footer .ft-top>.ft-left li:nth-child(n+2) {
+  height: 25px;   
+  line-height: 25px;
+}
+.footer .ft-top>.ft-left li:first-child {
+  height: 35px;  
+}
+.footer .ft-top>.ft-left li h3 {
+    font-weight: 600;
+}
+.footer .ft-top>.ft-left .ft-border {
+    border-bottom: 3px solid white;
+    padding-bottom: 5px;
+}
+
+
+.footer .ft-top>.ft-right {
+    height: 100%;
+    float: right;
+    width: 58%;
+}
+
+.footer .ft-top>.ft-right>ul {
+    padding: 0 40px;
+    float: left;
+}
+.footer .ft-top>.ft-right>ul>li {
+    height: 30px;
+    line-height: 30px;
+}
+.footer .ft-top>.ft-right>ul>li>span {
+    font-size: 18px;
+    display: inline-block;
+    width: 30px;
+    color: #B9B9B9;
+}
+.footer .ft-top>.ft-right>div {
+    padding: 0 20px;
+    float: left;
+}
+
+.footer .ft-bottom {
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    vertical-align: middle;
+    background-color: #2B2B2D;
+}
+
+
+

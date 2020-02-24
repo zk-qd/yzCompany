@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>亚哲科技股份有限公司</title>
+    <meta name="keywords" content="企业简介,亚哲科技股份有限公司">
+    <meta name="description" content="企业简介-亚哲科技股份有限公司">
+    <!-- <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> -->
+    <link rel="stylesheet" href="./assets/css/context/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <meta name='viewport' content='width=1440' />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    </meta>
+    <style>
+        .swiper-container {
+            width: 100%;
+            /* height: 720px; */
+            height: 500px;
+        }
+
+        .swiper-slide>a {
+            background-size: 100% 100%;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: scroll;
+        }
+
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            border-radius: 5px !important;
+            display: inline-block;
+            background: white;
+            position: relative;
+            margin: 0 10px !important;
+
+        }
+
+        .swiper-pagination-bullet-active::before {
+            content: '';
+            position: absolute;
+            width: 21px;
+            height: 21px;
+            border: 1px solid #EFBB34;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 20px;
+            box-sizing: border-box;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: rgba(225, 225, 225, 1);
+            background-color: rgba(0, 0, 0, 0.498039);
+            width: 30px;
+            height: 60px;
+        }
+
+        .swiper-button-next {
+            right: 100px;
+        }
+
+        .swiper-button-prev {
+            left: 100px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body class='bg-color'>
+    <header class='header'>
+        <div class='center clearfix visible'>
+            <div class='hd-logo'>
+                <img src="./assets/img/logo.png" title="logo" alt="logo">
+            </div>
+            <nav class='hd-nav text-color-1'>
+            </nav>
+        </div>
+    </header>
+    <main class='main'>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="#"
+                        style="background-image: url(./assets/img/index/banner1.png);"></a></div>
+                <div class="swiper-slide"><a href="#"
+                        style="background-image: url(./assets/img/index/banner1.png);"></a></div>
+                <div class="swiper-slide"><a href="#"
+                        style="background-image: url(./assets/img/index/banner1.png);"></a></div>
+                <div class="swiper-slide"><a href="#"
+                        style="background-image: url(./assets/img/index/banner1.png);"></a></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- 如果需要滚动条 -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+    </main>
+    <footer class='footer'>
+
+    </footer>
+    <script src="./assets/js/common/nav.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js" async></script>
+
+    <!-- <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js" defer></script> -->
+    <script>
+        window.addEventListener('load', function (e) {
+            var mySwiper = new Swiper('.swiper-container', {
+                direction: 'horizontal', // 垂直切换选项
+                loop: true, // 循环模式选项
+
+                // 如果需要分页器
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // 如果需要前进后退按钮
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // 如果需要滚动条
+                // scrollbar: {
+                //     el: '.swiper-scrollbar',
+                // },
+            })
+        });
+    </script>
+</body>
+
+</html>

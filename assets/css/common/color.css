@@ -1,0 +1,39 @@
+
+/* 背景颜色 */
+.bg-color {
+    color: #FFF !important;
+}
+
+/* 主颜色 */
+.main-color {
+    color: #03a9f4 !important;
+}
+
+/* 辅助颜色 */
+.minor-color {
+    color: #FFC107 !important;
+}
+
+
+/* 文本颜色 权重一次降低 */
+.text-color-1 {
+    color: #212121 !important;
+}
+
+.text-color-2 {
+    color: #757575 !important;
+}
+
+.text-color-3 {
+    color: #bdbdbd !important;
+}
+
+/* 深原色 */
+.deep-origin-color {
+    color: #0288D1 !important;
+}
+
+/* 浅原色 */
+.shallow-origin-color {
+    color: #B3E5FC !important;
+}
