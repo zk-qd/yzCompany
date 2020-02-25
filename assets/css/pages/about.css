@@ -4,14 +4,18 @@
 
 .about .abt-img {
     width: 100%;
-    background-color: green;
     margin-bottom: 20px;
     margin: 30px 0 50px 0;
+    height: 400px;
+}
+.about .abt-img>img {
+    width: 100%;
+    height: 100%;
 }
 
 .about .abt-left {
     float: left;
-    height: 436px;
+    height: 336px;
     box-shadow: 0px 0px 10px rgba(242, 242, 242, 1);
     border: 1px solid rgba(242, 242, 243, 1);
     width: 218px;
@@ -94,13 +98,19 @@
     font-size: 22px;
 }
 .about .abt-right .abt-content {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 200%;
     font-family: 楷体;
     color: #707070;
     letter-spacing: 0px;
     padding: 20px;
 }
+/* 企业简介 */
 .about .abt-right .abt-content>p {
     text-indent: 72px;
+}
+/* 企业文化 */
+.about .abt-right .abt-content .abt-culture {
+    width: 100%;
+    line-height: 40px;
 }

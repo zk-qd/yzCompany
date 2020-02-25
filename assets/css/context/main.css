@@ -37,4 +37,5 @@
 
 body {
     border-bottom: transparent solid 1px;
+    overflow-x: hidden;
 }

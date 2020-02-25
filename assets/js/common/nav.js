@@ -1,3 +1,49 @@
+
+
+// 获取头部导航信息
+!function () {
+    var href = location.href,
+        nav = 0,
+        hrefs = href.split('?');
+    if (hrefs.length == 1) {
+        nav = 0;
+    } else {
+        // 人为改变时
+        try {
+            var search = hrefs[1].split('=');
+            if (search[0] !== 'nav') throw new URIError('');
+            nav = search[1];
+            if (!nav || isNaN(nav)) throw new URIError('');
+        } catch (e) {
+            nav = 0;
+        }
+    };
+    window.navObj = {
+        index: nav,
+        beforeIndex: 0,
+        fileName: href.match(/\w+(?=.html)/)[0],
+    }
+}();
+
+//  导航栏选中
+window.navSelected = function (navObj) {
+    if(!navObj) navObj = window.navObj;
+    var className = 'hd-' + navObj.fileName,
+        index = navObj.index,
+        beforeIndex = navObj.beforeIndex,
+        pli = document.querySelector('nav.hd-nav').querySelector('.' + className);
+    var clis = pli.querySelectorAll('li');
+    if (clis.length) {
+        // 删除之前的
+        clis[beforeIndex].classList.remove('active');
+        pli.classList.add('active');
+        clis[index].classList.add('active');
+    } else {
+        pli.classList.add('active');
+    }
+};
+
+
 // 顶部导航
 (function (window, document) {
     // 渲染导航
@@ -21,16 +67,12 @@
                     url: './about.html?nav=1',
                 },
                 {
-                    title: '资质荣誉',
+                    title: '组织架构',
                     url: './about.html?nav=2',
                 },
                 {
-                    title: '合作伙伴',
+                    title: '资质荣誉',
                     url: './about.html?nav=3',
-                },
-                {
-                    title: '员工风采',
-                    url: './about.html?nav=4',
                 },
             ]
         },
@@ -40,12 +82,28 @@
             url: './produce.html?nav=0',
             children: [
                 {
-                    title: '云服务',
+                    title: '公交设配',
                     url: './produce.html?nav=0',
                 },
                 {
-                    title: '人工智能',
+                    title: '出租/约租设备',
                     url: './produce.html?nav=1',
+                },
+                {
+                    title: '人脸识别系统',
+                    url: './produce.html?nav=2',
+                },
+                {
+                    title: '辅助驾驶设备',
+                    url: './produce.html?nav=3',
+                },
+                {
+                    title: '智能手机柜',
+                    url: './produce.html?nav=4',
+                },
+                {
+                    title: '电子沙盘',
+                    url: './produce.html?nav=5',
                 },
             ]
         },
@@ -55,12 +113,16 @@
             url: './scheme.html?nav=0',
             children: [
                 {
-                    title: '云服务',
+                    title: '交通行业',
                     url: './scheme.html?nav=0',
                 },
                 {
-                    title: '人工智能',
+                    title: '军队行业',
                     url: './scheme.html?nav=1',
+                },
+                {
+                    title: '教育行业',
+                    url: './scheme.html?nav=2',
                 },
             ]
         },
@@ -84,22 +146,25 @@
             ]
         },
         {
-            className: 'hd-recruitment',
-            title: '招贤纳士',
-            url: './recruitment.html',
-        },
-        {
             className: 'hd-contact',
             title: '联系我们',
             url: './contact.html?nav=0',
             children: [
                 {
-                    title: '联系方式',
+                    title: '公司地图',
                     url: './contact.html?nav=0',
                 },
                 {
-                    title: '在线留言',
+                    title: '联系方式',
                     url: './contact.html?nav=1',
+                },
+                {
+                    title: '在线留言',
+                    url: './contact.html?nav=3',
+                },
+                {
+                    title: '在线留言',
+                    url: './contact.html?nav=4',
                 },
             ]
         },
@@ -122,7 +187,7 @@
                 html.push(
                     "<li class='" + item.className + "'>" +
                     "<h3 title='" + item.title + "'>" +
-                    "<a class='text-color-2' href='" + item.url + "' title='" + item.title + "'>" + item.title + "</a>" +
+                    "<a class='text-color-1' href='" + item.url + "' title='" + item.title + "'>" + item.title + "</a>" +
                     "</h3>" +
                     "</li>"
                 );
@@ -136,41 +201,39 @@
     navDom.innerHTML = html.join('').trim();
 
     // li标签绑定鼠标悬停事件 子菜单下拉
-   function liMouseEvent() {
-    var lis = document.getElementsByClassName('hd-navp')[0].querySelectorAll('li');
-    var handle = {
-        handleEvent(e) {
-            var current = e.currentTarget,
-                ul = current.querySelector('ul');
-            switch(e.type) {
-                case 'mouseenter':
-                if(ul) {
-                    var count = ul.childElementCount;
-                    ul.style.height = count * 30 + 'px';
+    function liMouseEvent() {
+        var lis = document.getElementsByClassName('hd-navp')[0].querySelectorAll('li');
+        var handle = {
+            handleEvent(e) {
+                var current = e.currentTarget,
+                    ul = current.querySelector('ul');
+                switch (e.type) {
+                    case 'mouseenter':
+                        if (ul) {
+                            var count = ul.childElementCount;
+                            ul.style.height = count * 40 + 'px';
+                        }
+                        break;
+                    case 'mouseleave':
+                        if (ul) {
+                            var count = ul.childElementCount;
+                            ul.style.height = 0 + 'px';
+                        }
+                        break;
                 }
-                break;
-                case 'mouseleave':
-                    if(ul) {
-                        var count = ul.childElementCount;
-                        ul.style.height = 0 + 'px';
-                    }
-                break;
             }
-        }
-    };
-    Array.prototype.forEach.call(lis,function(item,index) {
-        item.addEventListener('mouseenter',handle);
-        item.addEventListener('mouseleave',handle);
-    });
-   }
-   liMouseEvent();
-
-
-    //  li标签选中事件
-   function liSelected() {
-       
-   }
+        };
+        Array.prototype.forEach.call(lis, function (item, index) {
+            item.addEventListener('mouseenter', handle);
+            item.addEventListener('mouseleave', handle);
+        });
+    }
+    liMouseEvent();
+    // 初始化选中
+    window.navSelected();
 })(window, document);
+
+
 
 
 // 底部导航
@@ -243,12 +306,12 @@
                 </div>
                 <div class='ft-right clearfix'>
                     <ul>
-                        <li><span class='iconfont icon-phone1'></span>电话:&nbsp;&nbsp;<em>020-38330668</em></li>
+                        <li><span class='iconfont icon-phone1'></span>电话:&nbsp;&nbsp;<em>020-89857781</em></li>
                         <li><span class='iconfont icon-phone1'></span>销售电话:&nbsp;&nbsp;<em>020-38330668</em></li>
                         <li><span style='font-size: 16px;' class='iconfont icon-phone'></span>服务热线:&nbsp;&nbsp;<em>020-38330668</em></li>
                         <li><span class='iconfont icon-emailFilled
                         '></span>技术支持邮箱:&nbsp;&nbsp;<em>020-38330668</em></li>
-                        <li><span class='iconfont icon-adress'></span>地址:&nbsp;&nbsp;<em>020-38330668</em></li>
+                        <li><span class='iconfont icon-adress'></span>地址:&nbsp;&nbsp;<em>广州市黄埔区科学大道50号绿地中央广场A3栋1806</em></li>
                     </ul>
                     <div>
                         <img src="" alt="">
@@ -284,6 +347,7 @@
 })(window, document);
 
 
+
 // 侧边栏
 (function (window, document) {
     var aside = document.getElementsByClassName('aside-nav')[0];
@@ -294,10 +358,11 @@
                 current = e.currentTarget,
                 lis = current.children,
                 index,
-                beforeIndex;
-                if(active.nodeName.toLowerCase() !== 'li') active = active.parentElement; 
+                beforeIndex = 0;
+            // 如果不是target不是li
+            if (active.nodeName.toLowerCase() !== 'li') active = active.parentElement;
             for (var i = 0, length = lis.length; i < length; i++) {
-                // 记录上一次的active
+                // 记录上一次的index和当前的index
                 if (lis[i].classList.contains('active')) beforeIndex = i;
                 if (lis[i] == active) {
                     index = i;
@@ -310,29 +375,16 @@
                 var contents = content.querySelectorAll('ul');
                 contents[beforeIndex].classList.remove('active');
                 contents[index].classList.add('active');
+                // 选中导航
+                window.navSelected({
+                    fileName: window.navObj.fileName,
+                    index: index,
+                    beforeIndex: beforeIndex,
+                })
+
             }
         })
-
         // 导航栏处于点击状态
-        function active() {
-            var href = location.href,
-                nav = 0,
-                hrefs = href.split('?');
-            if (hrefs.length == 1) {
-                nav = 0;
-            } else {
-                // 人为改变时
-                try {
-                    var search = hrefs[1].split('=');
-                    if (search[0] !== 'nav') throw new URIError('');
-                    nav = search[1];
-                    if (!nav || isNaN(nav)) throw new URIError('');
-                } catch (e) {
-                    nav = 0;
-                }
-            }
-            aside.children[nav].click();
-        }
-        active();
+        aside.children[window.navObj.index].click();
     }
 })(window, document)
