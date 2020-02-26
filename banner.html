@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+</head>
+<style>
+      .swiper-container {
+            width: 100%;
+            /* height: 720px; */
+            height: 500px;
+        }
+
+        .swiper-slide>a {
+            background-size: 100% 100%;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: scroll;
+        }
+
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            border-radius: 5px !important;
+            display: inline-block;
+            background: white;
+            position: relative;
+            margin: 0 10px !important;
+
+        }
+
+        .swiper-pagination-bullet-active::before {
+            content: '';
+            position: absolute;
+            width: 21px;
+            height: 21px;
+            border: 1px solid #EFBB34;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 20px;
+            box-sizing: border-box;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: rgba(225, 225, 225, 1);
+            background-color: rgba(0, 0, 0, 0.498039);
+            width: 30px;
+            height: 60px;
+        }
+
+        .swiper-button-next {
+            right: 100px;
+        }
+
+        .swiper-button-prev {
+            left: 100px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 18px;
+        }
+</style>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#"
+                    style="background-image: url(./assets/img/index/banner1.png);"></a></div>
+            <div class="swiper-slide"><a href="#"
+                    style="background-image: url(./assets/img/index/banner2.png);"></a></div>
+            <div class="swiper-slide"><a href="#"
+                    style="background-image: url(./assets/img/index/banner3.png);"></a></div>
+            <div class="swiper-slide"><a href="#"
+                    style="background-image: url(./assets/img/index/banner1.png);"></a></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- 如果需要滚动条 -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js" async></script>
+    <script>
+        window.onload = function() {
+
+        var mySwiper = new Swiper('.swiper-container', {
+                direction: 'vertical', // 垂直切换选项
+                loop: true, // 循环模式选项
+                slidesPerView: 2,
+                // 如果需要分页器
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                // 如果需要前进后退按钮
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // 如果需要滚动条
+                // scrollbar: {
+                //     el: '.swiper-scrollbar',
+                // },
+            });
+        }
+    </script>
+</body>
+</html>

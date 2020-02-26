@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>亚哲科技股份有限公司</title>
+    <meta name="keywords" content="企业简介,亚哲科技股份有限公司">
+    <meta name="description" content="企业简介-亚哲科技股份有限公司">
+    <!-- <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> -->
+    <link rel="stylesheet" href="./assets/css/context/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <meta name='viewport' content='width=1440' />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    </meta>
+</head>
+<style>
+    .swiper-container {
+        width: 100%;
+        height: 1000px;
+    }
+
+    .swiper-slide {
+        flex-shrink: 0;
+        height: 100%;
+        position: relative;
+        width: auto !important;
+        transition-property: transform;
+    }
+
+    .swiper-slide>a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        padding: 10px;
+    }
+
+    .swiper-scrollbar-drag {
+        width: 100%;
+        position: relative;
+        background: rgba(0, 0, 0, .1);
+        border-radius: 10px;
+        left: 0;
+        top: 0;
+    }
+</style>
+
+<body class='bg-color'>
+    <header class='header'>
+        <div class='center clearfix visible'>
+            <div class='hd-logo'>
+                <img src="./assets/img/logo.png" title="logo" alt="logo">
+            </div>
+            <nav class='hd-nav text-color-1'>
+            </nav>
+        </div>
+    </header>
+    <main class='main'>
+        <div class='main-img'>
+            <img src="./assets/img/produce/produce.png" title="产品中心" alt="产品中心">
+        </div>
+        <div class='center clearfix'>
+            <ul class='pdc-info clearfix'>
+                <aside class='pdci-left'>
+                    <div class='pdci-left-title'>
+                        <p><span class='iconfont icon-guanyuwomenicon'></span>产品中心</p>
+                    </div>
+                    <div class="swiper-container aside-banner">
+                        <ul class="swiper-wrapper">
+                        </ul>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </aside>
+                <section class='pdci-right content-nav'>
+                   
+                </section>
+            </ul>
+        </div>
+    </main>
+    <footer class='footer'>
+
+    </footer>
+
+    <script src="./assets/js/common/nav.js"></script>
+    <script src="./assets/js/context/produceData.js"></script>
+    <script src="./assets/js/common/produce.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js" async></script>
+    <script>
+        window.onload = function () {
+            var mySwiper = new Swiper('.swiper-container', {
+                direction: 'vertical', // 垂直切换选项
+                loop: false, // 循环模式选项
+                slidesPerView: 5,
+                // 如果需要滚动条
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>亚哲科技股份有限公司</title>
+    <meta name="keywords" content="企业简介,亚哲科技股份有限公司">
+    <meta name="description" content="企业简介-亚哲科技股份有限公司">
+    <!-- <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> -->
+    <link rel="stylesheet" href="./assets/css/context/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <meta name='viewport' content='width=1440' />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    </meta>
+</head>
+<style>
+    .swiper-container {
+        width: 100%;
+        height: 1000px;
+    }
+
+    .swiper-slide {
+        flex-shrink: 0;
+        height: 100%;
+        position: relative;
+        width: auto !important;
+        transition-property: transform;
+    }
+
+    .swiper-slide>a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        padding: 10px;
+    }
+
+    .swiper-scrollbar-drag {
+        width: 100%;
+        position: relative;
+        background: rgba(0, 0, 0, .1);
+        border-radius: 10px;
+        left: 0;
+        top: 0;
+    }
+</style>
+
+<body class='bg-color'>
+    <header class='header'>
+        <div class='center clearfix visible'>
+            <div class='hd-logo'>
+                <img src="./assets/img/logo.png" title="logo" alt="logo">
+            </div>
+            <nav class='hd-nav text-color-1'>
+            </nav>
+        </div>
+    </header>
+    <main class='main'>
+        <div class='main-img'>
+            <img src="./assets/img/produce/produce.png" title="产品中心" alt="产品中心">
+        </div>
+        <div class='center clearfix'>
+            <ul class='pdc-info clearfix'>
+                <aside class='pdci-left'>
+                    <div class='pdci-left-title'>
+                        <p><span class='iconfont icon-guanyuwomenicon'></span>产品中心</p>
+                    </div>
+                    <div class="swiper-container aside-banner">
+                        <ul class="swiper-wrapper">
+                        </ul>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </aside>
+                <section class='pdci-right content-nav'>
+                    <h1 class='pdci-title1 text-color-1' title='公交车载主机'>公交车载主机</h1>
+                    <div class='pdci-content-img'>
+                        <h3 class='pdci-title2 text-color-1'>产品图片</h3>
+                        <img src='./assets/img/produce/bus1.jpg' alt='公交车载主机' title='公交车载主机'>
+                    </div>
+                    <ul class='pdci-feature'>
+                        <li>
+                            <h3 class='pdci-title2 text-color-1'>产品功能特点</h3>
+                            <ul>
+                                <li>
+                                    <h4 class='pdci-title3  text-color-2'>配置概述</h4>
+                                    <div class='pdci-content'>
+                                        <p class='text-color-2'>内置海思高性能图像处理芯片，H</p>
+                                        <p class='text-color-2'>内置海思高性能图像处理芯片，H</p>
+                                        <p class='text-color-2'>内置海思高性能图像处理芯片，H</p>
+                                        <p class='text-color-2'>内置海思高性能图像处理芯片，H</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class='pdci-table'>
+                        <h3 class='pdci-title2 text-color-1'>产品参数</h3>
+                        <table>
+                            <caption class='text-color-2'>产品技术参数:A1480</caption>
+                            <thead class='text-color-2'>
+                                <tr>
+                                    <th class='pdci-chead'>项目</th>
+                                    <th class='pdci-chead'>项目</th>
+                                    <th class='pdci-chead'>项目</th>
+                                </tr>
+                            </thead>
+                            <tbody class='text-color-2'>
+                                <tr>
+                                    <td rowspan="5" class='pdci-rhead'>系统</td>
+                                    <td class='pdci-rcontent1'>主处理器</td>
+                                    <td class='pdci-rcontent2'>主处理器</td>
+                                </tr>
+                                <tr>
+                                    <td class='pdci-rcontent1'>主处理器</td>
+                                    <td class='pdci-rcontent2'>主处理器</td>
+                                </tr>
+                                <tr>
+                                    <td class='pdci-rcontent1'>主处理器</td>
+                                    <td class='pdci-rcontent2'>主处理器</td>
+                                </tr>
+                                <tr>
+                                    <td class='pdci-rcontent1'>主处理器</td>
+                                    <td class='pdci-rcontent2'>主处理器</td>
+                                </tr>
+                                <tr>
+                                    <td class='pdci-rcontent1'>主处理器</td>
+                                    <td class='pdci-rcontent2'>主处理器</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </ul>
+        </div>
+    </main>
+    <footer class='footer'>
+
+    </footer>
+
+    <script src="./assets/js/common/nav.js"></script>
+    <script src="./assets/js/context/produceData.js"></script>
+    <script src="./assets/js/common/produce.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js" async></script>
+    <script>
+        window.onload = function () {
+            var mySwiper = new Swiper('.swiper-container', {
+                direction: 'vertical', // 垂直切换选项
+                loop: false, // 循环模式选项
+                slidesPerView: 5,
+                // 如果需要滚动条
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });
+        }
+    </script>
+</body>
+
+</html>

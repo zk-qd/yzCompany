@@ -18,10 +18,13 @@
             nav = 0;
         }
     };
+    var fileName = href.match(/\w+(?=.html)/)[0];
+    // 判断是否是详情页
+    if(fileName == 'pinfo') fileName = 'produce';
     window.navObj = {
         index: nav,
         beforeIndex: 0,
-        fileName: href.match(/\w+(?=.html)/)[0],
+        fileName: fileName,
     }
 }();
 
@@ -33,14 +36,19 @@ window.navSelected = function (navObj) {
         beforeIndex = navObj.beforeIndex,
         pli = document.querySelector('nav.hd-nav').querySelector('.' + className);
     var clis = pli.querySelectorAll('li');
-    if (clis.length) {
+    if(index == -1) {
+        // 只选中头部
+        clis[beforeIndex]&&clis[beforeIndex].classList.remove('active');
+        pli.classList.add('active');
+    } else if (clis.length) {
         // 删除之前的
-        clis[beforeIndex].classList.remove('active');
+        clis[beforeIndex]&&clis[beforeIndex].classList.remove('active');
         pli.classList.add('active');
         clis[index].classList.add('active');
     } else {
         pli.classList.add('active');
     }
+    
 };
 
 
@@ -79,7 +87,7 @@ window.navSelected = function (navObj) {
         {
             className: 'hd-produce',
             title: '产品中心',
-            url: './produce.html?nav=0',
+            url: './produce.html?nav=-1',
             children: [
                 {
                     title: '公交设配',
@@ -98,12 +106,8 @@ window.navSelected = function (navObj) {
                     url: './produce.html?nav=3',
                 },
                 {
-                    title: '智能手机柜',
+                    title: '军队产品',
                     url: './produce.html?nav=4',
-                },
-                {
-                    title: '电子沙盘',
-                    url: './produce.html?nav=5',
                 },
             ]
         },

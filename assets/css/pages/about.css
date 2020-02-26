@@ -1,19 +1,4 @@
-.about .center {
-    overflow: visible !important;
-}
-
-.about .abt-img {
-    width: 100%;
-    margin-bottom: 20px;
-    margin: 30px 0 50px 0;
-    height: 400px;
-}
-.about .abt-img>img {
-    width: 100%;
-    height: 100%;
-}
-
-.about .abt-left {
+.abt-left {
     float: left;
     height: 336px;
     box-shadow: 0px 0px 10px rgba(242, 242, 242, 1);
@@ -24,7 +9,7 @@
     font-size: 16px;
 }
 
-.about .abt-left>div {
+.abt-left>div {
     width: 100%;
     height: 100px;
     line-height: 100px;
@@ -33,7 +18,7 @@
     background-color: #1156A4;
     text-align: center;
 }
-.about .abt-left>div span {
+.abt-left>div span {
     font-size: 35px;
     vertical-align: middle;
     margin-top: -5px;
@@ -49,39 +34,39 @@
     vertical-align: middle;
     margin: 0 10px;
 }
-.about .abt-left li {
+.abt-left li {
     padding: 15px 20px;
 }
-.about .abt-left li.active,
-.about .abt-left li:hover {
+.abt-left li.active,
+.abt-left li:hover {
     background-color: #03a9f4;
 }
-.about .abt-left li.active a,
-.about .abt-left li:hover a {
+.abt-left li.active a,
+.abt-left li:hover a {
     color: white;
 }
-.about .abt-left li:hover .abt-dot,
-.about .abt-left li.active .abt-dot{
+.abt-left li:hover .abt-dot,
+.abt-left li.active .abt-dot{
     background-color: white;
 }
-.about .abt-left li a {
+.abt-left li a {
     color: #212121;
 }
 /* 右边 */
-.about .abt-right {
+.abt-right {
     float: right;
     width: 893px;
     padding: 20px 20px;
     border: 1px solid rgba(242, 242, 243, 1);
     box-shadow: 0px 0px 20px rgba(242, 242, 242, 1);
 }
-.about .abt-right>ul {
+.abt-right>ul {
     display: none;
 }
-.about .abt-right>.active {
+.abt-right>.active {
     display: block;
 }
-.about .abt-right .abt-top {
+.abt-right .abt-top {
     width: 100%;
     border-bottom: 1.2px solid rgba(242, 242, 243, 1);
     height: 60px; 
@@ -90,14 +75,14 @@
     font-size: 22px;
 }
 
-.about .abt-right .abt-top>h1 {
+.abt-right .abt-top>h1 {
     padding: 0 30px 0 10px;
     border-bottom: 2px solid #D02209;
     height: 100%;
     display: inline-block;
     font-size: 22px;
 }
-.about .abt-right .abt-content {
+.abt-right .abt-content {
     font-size: 17px;
     line-height: 200%;
     font-family: 楷体;
@@ -106,11 +91,11 @@
     padding: 20px;
 }
 /* 企业简介 */
-.about .abt-right .abt-content>p {
+.abt-right .abt-content>p {
     text-indent: 72px;
 }
 /* 企业文化 */
-.about .abt-right .abt-content .abt-culture {
+.abt-right .abt-content .abt-culture {
     width: 100%;
     line-height: 40px;
 }

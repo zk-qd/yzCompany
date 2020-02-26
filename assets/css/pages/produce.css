@@ -1,0 +1,190 @@
+/* 列表容器 */
+.pdc-list {
+    width: 100%;
+}
+.pdc-list>li {
+    width: calc((100% - 60px)/3);
+    float: left;
+    margin: 15px 10px 10px;
+    height: 296px;
+}
+
+
+.pdc-list>li>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.pdc-dynamic {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+.pdc-mask {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 260px;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    transition: all 500ms linear;
+}
+
+.pdc-dynamic>img {
+    height: 260px;
+    line-height: 260px;
+    vertical-align: top;
+    width: 100%;
+    transition: all 500ms linear;
+}
+.pdc-dynamic figcaption{
+    height: 36px;
+    line-height: 36px;
+    width: 100%;
+    font-size: 14px;
+    transition: all 500ms linear;
+    text-align: center;
+}
+/* li悬浮 */
+.pdc-list>li:hover img {
+    margin-top: -15px;
+}
+.pdc-list>li:hover figcaption {
+    font-size: 16px;
+    color: #03a9f4!important;
+}
+.pdc-list>li:hover mark {
+    display: block;
+    /* background-color: #03a9f425; */
+    transform: translateY(-15px);
+}
+
+
+
+/* produce详情页  pinfo*/
+.pdci-left {
+    float: left;
+    box-shadow: 0px 0px 10px rgba(242, 242, 242, 1);
+    border: 1px solid rgba(242, 242, 243, 1);
+    width: 218px;
+    text-align: left;
+    color: #000;
+    font-size: 16px;
+}
+
+.pdci-left>.pdci-left-title {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    color: white;
+    font-size: 22px;
+    background-color: #1156A4;
+    text-align: center;
+}
+.pdci-left>.pdci-left-title span {
+    font-size: 35px;
+    vertical-align: middle;
+    margin-top: -5px;
+    display: inline-block;
+}
+/* 轮播 */
+
+.aside-banner .pdci-dynamic {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+.aside-banner .pdci-mask {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 144px;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    transition: all 500ms linear;
+}
+
+.aside-banner .pdci-dynamic>img {
+    height: 144px;
+    line-height: 144px;
+    vertical-align: top;
+    width: 100%;
+    transition: all 500ms linear;
+}
+.aside-banner .pdci-dynamic figcaption{
+    height: 36px;
+    line-height: 36px;
+    width: 100%;
+    font-size: 14px;
+    transition: all 500ms linear;
+    text-align: center;
+}
+/* li悬浮 */
+.aside-banner li:hover img {
+    margin-top: -10px;
+}
+.aside-banner li:hover figcaption {
+    font-size: 16px;
+    color: #03a9f4!important;
+}
+.aside-banner li:hover mark {
+    display: block;
+    /* background-color: #03a9f425; */
+    transform: translateY(-10px);
+}
+
+
+
+/* 右边 */
+.pdci-right {
+    float: right;
+    width: 893px;
+    padding: 20px 40px;
+    border: 1px solid rgba(242, 242, 243, 1);
+    box-shadow: 0px 0px 20px rgba(242, 242, 242, 1);
+}
+.pdci-title1 {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+}
+.pdci-title2 {
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+}
+.pdci-title3 {
+    font-size: 17px;
+    height: 35px;
+    line-height: 35px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* 要素 */
+.pdci-right .pdci-content {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
+.pdci-right .pdci-content>p {
+    padding-left: 72px;
+}
+
+
+/* 参数表格 */
+.pdci-right .pdci-table table {
+    width: 100%;
+    border: 1px solid red;
+}
