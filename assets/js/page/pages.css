@@ -1,0 +1,49 @@
+:root {
+    --height: 35px;
+    --width: 35px;
+    --margin: 0 7px;
+}
+
+/* 分页 */
+#page-serial-a {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+#page-serial-a .page-wrapper {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+}
+/*需求改变 可以修改公共样式 */
+#page-serial-a .page-equal {
+    flex: none;
+    border: #EFEFEF solid 1px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 3px #EFEFEF;
+    text-align: center;
+    font-size: 13px;
+    color:#535353;
+    height: var(--height);
+    line-height: var(--height);
+    width: var(--width);
+    margin: var(--margin);
+    font-weight: 500;
+    cursor: pointer;
+}
+#page-serial-a .page-equal:hover {
+    background-color: #FF8200;
+}
+#page-serial-a .page-prev,
+#page-serial-a .page-next {
+    width: calc(var(--width)/2*5);
+}
+#page-serial-a .page-disabled,
+#page-serial-a .page-disabled:hover  {
+    background-color: #EFEFEF;
+}
+#page-serial-a .page-active {
+    background-color: #FF8200;
+}
+

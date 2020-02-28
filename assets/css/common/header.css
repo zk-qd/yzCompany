@@ -50,7 +50,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   height: 100%;
 }
@@ -66,10 +66,12 @@
 .header .hd-navp ul {
   line-height: 40px;
   position: absolute;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   top: 100%;
   z-index: 999;
-  min-width: 100%;
+  max-width: 100%;
+  min-width: 80%;
   height: 0px;
   background: #fff;
   transition: all 200ms linear 0s;
@@ -78,9 +80,9 @@
   box-shadow: 0px 2px 2px #B3E5FC;
 }
 /* 产品中心 单独宽度 */
-.header .hd-produce>ul{
-  width: 150%;
-}
+/* .header .hd-produce>ul{
+  width: 100%;
+} */
 
 .header .hd-navp > li > h3 {
   height: 100%;

@@ -1,0 +1,172 @@
+/* 解决方案 */
+.scm-left {
+    float: left;
+    box-shadow: 0px 0px 10px rgba(242, 242, 242, 1);
+    border: 1px solid rgba(242, 242, 243, 1);
+    width: 218px;
+    text-align: left;
+    color: #000;
+    font-size: 16px;
+}
+
+.scm-left>.scm-left-title {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    color: white;
+    font-size: 22px;
+    background-color: #1156A4;
+    text-align: center;
+}
+.scm-left>.scm-left-title span {
+    font-size: 35px;
+    vertical-align: middle;
+    margin-top: -5px;
+    display: inline-block;
+}
+/* 小点 */
+.scm-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: rgba(225,225,225);
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+.scm-left li {
+    padding: 15px 20px;
+}
+.scm-left li.active,
+.scm-left li:hover {
+    background-color: #03a9f4;
+}
+.scm-left li.active a,
+.scm-left li:hover a {
+    color: white;
+}
+.scm-left li:hover .scm-dot,
+.scm-left li.active .scm-dot{
+    background-color: white;
+}
+.scm-left li a {
+    color: #212121;
+}
+
+
+
+
+
+
+/* 右边 */
+.scm-right {
+    float: right;
+    width: 893px;
+    padding: 20px 40px;
+    border: 1px solid rgba(242, 242, 243, 1);
+    box-shadow: 0px 0px 20px rgba(242, 242, 242, 1);
+    position: relative;
+}
+.scm-right::before,
+.scm-right::after {
+    box-sizing: border-box;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background-color: rgba(242, 242, 243, 1);;
+}
+.scm-right::after {
+    top: auto;
+    bottom: 20px;
+}
+.scm-title1 {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    height: 150px;
+    line-height: 150px;
+}
+.scm-title2 {
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+}
+.scm-title3 {
+    font-size: 17px;
+    height: 35px;
+    line-height: 35px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* 要素 */
+.scm-right .scm-content {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
+.scm-right .scm-content>p {
+    padding-left: 72px;
+}
+
+
+/* 参数表格 */
+.scm-right .scm-table table {
+    width: 100%;
+}
+.scm-table  table {
+    border-collapse: collapse;
+    font-size: 14px;
+}
+.scm-table th {
+    border: 1px solid #0288D1;
+}
+.scm-table td {
+    border: 1px solid #0288D1;
+    height: 25px;
+    line-height: 25px;
+}
+.scm-table caption {
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+}
+.scm-table .scm-chead {
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+}
+
+
+/* nextPrev */
+.scm-nextPrev {
+    height: 100px;
+    line-height: 100px;
+    width: 100%;
+    font-size: 16px;
+} 
+.scm-nextPrev .scm-nextPrev-left {
+    float: left;
+}
+.scm-nextPrev .scm-nextPrev-right {
+    float: right;
+}
+.scm-nextPrev .scm-nextPrev-left,
+.scm-nextPrev .scm-nextPrev-righ {
+    height: 100%;
+}
+.scm-nextPrev a {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.scm-nextPrev span {
+    font-weight: 500;
+}

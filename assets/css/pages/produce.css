@@ -44,7 +44,7 @@
     height: 36px;
     line-height: 36px;
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
     transition: all 500ms linear;
     text-align: center;
 }
@@ -53,7 +53,7 @@
     margin-top: -15px;
 }
 .pdc-list>li:hover figcaption {
-    font-size: 16px;
+    font-size: 17px;
     color: #03a9f4!important;
 }
 .pdc-list>li:hover mark {
@@ -138,15 +138,31 @@
     transform: translateY(-10px);
 }
 
-
-
 /* 右边 */
 .pdci-right {
     float: right;
     width: 893px;
-    padding: 20px 40px;
+    padding: 20px 20px;
     border: 1px solid rgba(242, 242, 243, 1);
     box-shadow: 0px 0px 20px rgba(242, 242, 242, 1);
+    position: relative;
+    letter-spacing: 3px;
+}
+/* .pdci-right::before, */
+.pdci-right::after {
+    box-sizing: border-box;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background-color: rgba(242, 242, 243, 1);
+}
+.pdci-right::after {
+    top: auto;
+    bottom: 20px;
 }
 .pdci-title1 {
     display: block;
@@ -180,11 +196,62 @@
 }
 .pdci-right .pdci-content>p {
     padding-left: 72px;
+    letter-spacing: 0px;
 }
 
 
 /* 参数表格 */
 .pdci-right .pdci-table table {
     width: 100%;
-    border: 1px solid red;
+    letter-spacing: 0px;
+}
+.pdci-table  table {
+    border-collapse: collapse;
+    font-size: 14px;
+}
+.pdci-table th {
+    border: 1px solid #bdbdbd;
+    padding-left:10px;
+}
+.pdci-table td {
+    border: 1px solid #bdbdbd;
+    height: 25px;
+    line-height: 25px;
+    padding-left:10px;
+}
+.pdci-table caption {
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+}
+.pdci-table .pdci-chead {
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+}
+
+
+/* nextPrev */
+.pdci-nextPrev {
+    height: 100px;
+    line-height: 100px;
+    width: 100%;
+    font-size: 16px;
+} 
+.pdci-nextPrev .pdci-nextPrev-left {
+    float: left;
+}
+.pdci-nextPrev .pdci-nextPrev-right {
+    float: right;
+}
+.pdci-nextPrev .pdci-nextPrev-left,
+.pdci-nextPrev .pdci-nextPrev-righ {
+    height: 100%;
+}
+.pdci-nextPrev a {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.pdci-nextPrev span {
+    font-weight: 500;
 }

@@ -20,7 +20,8 @@
     };
     var fileName = href.match(/\w+(?=.html)/)[0];
     // 判断是否是详情页
-    if(fileName == 'pinfo') fileName = 'produce';
+    if (fileName == 'pinfo') fileName = 'produce';
+    if (fileName == 'sinfo') fileName = 'scheme';
     window.navObj = {
         index: nav,
         beforeIndex: 0,
@@ -30,25 +31,25 @@
 
 //  导航栏选中
 window.navSelected = function (navObj) {
-    if(!navObj) navObj = window.navObj;
+    if (!navObj) navObj = window.navObj;
     var className = 'hd-' + navObj.fileName,
         index = navObj.index,
         beforeIndex = navObj.beforeIndex,
         pli = document.querySelector('nav.hd-nav').querySelector('.' + className);
     var clis = pli.querySelectorAll('li');
-    if(index == -1) {
+    if (index == -1) {
         // 只选中头部
-        clis[beforeIndex]&&clis[beforeIndex].classList.remove('active');
+        clis[beforeIndex] && clis[beforeIndex].classList.remove('active');
         pli.classList.add('active');
     } else if (clis.length) {
         // 删除之前的
-        clis[beforeIndex]&&clis[beforeIndex].classList.remove('active');
+        clis[beforeIndex] && clis[beforeIndex].classList.remove('active');
         pli.classList.add('active');
         clis[index].classList.add('active');
     } else {
         pli.classList.add('active');
     }
-    
+
 };
 
 
@@ -114,7 +115,7 @@ window.navSelected = function (navObj) {
         {
             className: 'hd-scheme',
             title: '解决方案',
-            url: './scheme.html?nav=0',
+            url: './scheme.html?nav=-1',
             children: [
                 {
                     title: '交通行业',
@@ -163,7 +164,7 @@ window.navSelected = function (navObj) {
                     url: './contact.html?nav=1',
                 },
                 {
-                    title: '在线留言',
+                    title: '招贤纳士',
                     url: './contact.html?nav=3',
                 },
                 {
@@ -252,59 +253,50 @@ window.navSelected = function (navObj) {
                             <h3><span class='ft-border'>关于</span>亚哲</h3>
                         </li>
                         <li>
-                            <a href='#' title='企业简介' alt='企业简介'>企业简介</a>
+                            <a href='./about.html?nav=0' title='企业简介' alt='企业简介'>企业简介</a>
                         </li>
                         <li>
-                            <a href='#' title='企业简介' alt='企业简介'>企业简介</a>
+                            <a href='./about.html?nav=1' title='企业文化' alt='企业文化'>企业文化</a>
                         </li>
                         <li>
-                            <a href='#' title='企业简介' alt='企业简介'>企业简介</a>
+                            <a href='./about.html?nav=2' title='组织架构' alt='组织架构'>组织架构</a>
                         </li>
                         <li>
-                            <a href='#' title='企业简介' alt='企业简介'>企业简介</a>
-                        </li>
-                        <li>
-                            <a href='#' title='企业简介' alt='企业简介'>企业简介</a>
+                            <a href='./about.html?nav=3' title='资质荣誉' alt='资质荣誉'>资质荣誉</a>
                         </li>
                     </ul>
                     <ul class='ft-produce'>
                         <li>
-                            <h3><span class='ft-border'>关于</span>亚哲</h3>
+                            <h3><span class='ft-border'>产品</span>中心</h3>
                         </li>
                         <li>
-                            <a href='#' title='企业简介' alt='企业简介'>企业简介</a>
+                            <a href='./produce.html?nav=0' title='公交设备' alt='公交设备'>公交设备</a>
                         </li>
                         <li>
-                            <a href='#' title='企业简介' alt='企业简介'>企业简介</a>
+                            <a href='./produce.html?nav=1' title='出租/约租设备' alt='出租/约租设备'>出租/约租设备</a>
                         </li>
                         <li>
-                            <a href='#' title='企业简介' alt='企业简介'>企业简介</a>
+                            <a href='./produce.html?nav=2' title='人脸识别系统' alt='人脸识别系统'>人脸识别系统</a>
                         </li>
                         <li>
-                            <a href='#' title='企业简介' alt='企业简介'>企业简介</a>
+                            <a href='./produce.html?nav=3' title='辅助驾驶设备' alt='辅助驾驶设备'>辅助驾驶设备</a>
                         </li>
                         <li>
-                            <a href='#' title='企业简介' alt='企业简介'>企业简介</a>
+                            <a href='./produce.html?nav=4' title='军队产品' alt='军队产品'>军队产品</a>
                         </li>
                     </ul>
                     <ul class='ft-news'>
                         <li>
-                            <h3><span class='ft-border'>关于</span>亚哲</h3>
+                            <h3><span class='ft-border'>新闻</span>资讯</h3>
                         </li>
                         <li>
-                            <a href='#' title='企业简介' alt='企业简介'>企业简介</a>
+                            <a href='./news.html?nav=0' title='热点新闻' alt='热点新闻'>热点新闻</a>
                         </li>
                         <li>
-                            <a href='#' title='企业简介' alt='企业简介'>企业简介</a>
+                            <a href='./news.html?nav=1' title='企业动向' alt='企业动向'>企业动向</a>
                         </li>
                         <li>
-                            <a href='#' title='企业简介' alt='企业简介'>企业简介</a>
-                        </li>
-                        <li>
-                            <a href='#' title='企业简介' alt='企业简介'>企业简介</a>
-                        </li>
-                        <li>
-                            <a href='#' title='企业简介' alt='企业简介'>企业简介</a>
+                            <a href='./news.html?nav=2' title='行业新闻' alt='行业新闻'>行业新闻</a>
                         </li>
                     </ul>
                 </div>
@@ -318,11 +310,11 @@ window.navSelected = function (navObj) {
                         <li><span class='iconfont icon-adress'></span>地址:&nbsp;&nbsp;<em>广州市黄埔区科学大道50号绿地中央广场A3栋1806</em></li>
                     </ul>
                     <div>
-                        <img src="" alt="">
+                        <img src='./assets/img/index/code1.png' alt="关注亚哲官方微信" title='关注亚哲官方微信'>
                         <p>关注亚哲官方微信</p>
                     </div>
                     <div>
-                        <img src="" alt="">
+                    <img src='./assets/img/index/code2.png' alt="关注亚哲官方微信" title='关注亚哲官方微信'>
                         <p>关注亚哲官方微信</p>
                     </div>
                 </div>
@@ -351,44 +343,8 @@ window.navSelected = function (navObj) {
 })(window, document);
 
 
-
-// 侧边栏
-(function (window, document) {
-    var aside = document.getElementsByClassName('aside-nav')[0];
-    var content = document.getElementsByClassName('content-nav')[0];
-    if (aside) {
-        aside.addEventListener('click', function (e) {
-            var active = e.target,
-                current = e.currentTarget,
-                lis = current.children,
-                index,
-                beforeIndex = 0;
-            // 如果不是target不是li
-            if (active.nodeName.toLowerCase() !== 'li') active = active.parentElement;
-            for (var i = 0, length = lis.length; i < length; i++) {
-                // 记录上一次的index和当前的index
-                if (lis[i].classList.contains('active')) beforeIndex = i;
-                if (lis[i] == active) {
-                    index = i;
-                }
-            };
-            if (index != undefined) {
-                // 切换active
-                lis[beforeIndex].classList.remove('active');
-                active.classList.add('active');
-                var contents = content.querySelectorAll('ul');
-                contents[beforeIndex].classList.remove('active');
-                contents[index].classList.add('active');
-                // 选中导航
-                window.navSelected({
-                    fileName: window.navObj.fileName,
-                    index: index,
-                    beforeIndex: beforeIndex,
-                })
-
-            }
-        })
-        // 导航栏处于点击状态
-        aside.children[window.navObj.index].click();
-    }
-})(window, document)
+// 字符省略
+window.omission = function(str,index) {
+    if(str.length<=index) return str;
+    else return str.slice(0,index-1) + '...';
+};

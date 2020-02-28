@@ -11,6 +11,28 @@
 <meta name='viewport' content='width=1440' />
 <meta http-equiv="Cache-Control" content="no-transform" /></meta>
 </head>
+<style>
+     .swiper-container {
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+    }
+    .swiper-slide {
+        flex-shrink: 0;
+        height: 100%;
+        position: relative;
+        width: auto !important;
+        transition-property: transform;
+    }
+    .swiper-scrollbar-drag {
+        width: 100%;
+        position: relative;
+        background: rgba(0, 0, 0, .1);
+        border-radius: 10px;
+        left: 0;
+        top: 0;
+    }
+</style>
 <body class='bg-color'>
     <header class='header'>
         <div class='center clearfix visible'>
@@ -25,11 +47,9 @@
         <div class='main-img'>
             <img src="./assets/img/scheme/scheme.png" title="解决方案" alt="解决方案">
         </div>
-        <div class='center clearfix'>
-            <ul class='pdc-list clearfix'>
-              
+            <ul class='scm-list'>
+            
             </ul>
-        </div>
     </main>
     <footer class='footer'>
        
@@ -37,6 +57,9 @@
    
     <script src="./assets/js/common/nav.js"></script>
     <script src="./assets/js/context/schemeData.js"></script>
-    <script src="./assets/js/common/produce.js"></script>
+    <script src="./assets/js/common/scheme.js"></script>
+    <script>
+       
+    </script>
 </body>
 </html>
