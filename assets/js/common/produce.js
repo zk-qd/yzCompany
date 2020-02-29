@@ -1,11 +1,10 @@
 // 渲染列表
 (function (window, document) {
     var pdcDom = document.getElementsByClassName('pdc-list')[0];
-
     // 不是产品页面
     if (!pdcDom) return;
     // 两个页面使用 produce和scheme除了数据不一样都是一样的
-    var produce = produceData,
+    var produce = eval(dataname),
         produceShow = [],
         // nav.js要先执行
         index = window.navObj.index;
@@ -22,19 +21,19 @@
     produceShow.forEach(function (item, index) {
         var children = item.children;
         html.push(
-            "<h2>" + item.title + "</h2>" +
+            "<h2 title='"+item.title+"'>" + item.title + "</h2>" +
+            "<h3 title='"+item.subtext+"'>" + item.subtext + "</h3>" +
             "<ul class='clearfix'>"
         )
         children.forEach(function (item, index) {
             if (item.type == 1) {
-
                 html.push(
                     "<li data-index='" + index + "'>" +
                     "<a href='javascript:void(0)' class='cSkip' title='" + item.title + "'>" +
-                    " <figure class='pdc-dynamic'>" +
-                    " <mark class='pdc-mask'></mark>" +
+                    "<figure class='pdc-dynamic'>" +
+                    "<mark class='pdc-mask'>"+item.title+"</mark>" +
                     "<img src='" + item.img + "' alt='" + item.title + "' title='" + item.title + "'>" +
-                    "<figcaption class='text-color-2'>" + item.title + "</figcaption>" +
+                    "<figcaption class='text-color-2' title='"+ item.summary +"'>" + window.omission(item.summary,40) + "</figcaption>" +
                     "</figure>" +
                     " </a>" +
                     "</li>"
@@ -88,7 +87,7 @@
     // 非pinfo页面
     if (!banner) return;
     var wrapper = banner.querySelector('.swiper-wrapper');
-    var produce = produceData,
+    var produce = eval(dataname),
         produceShow = [];
     // nav.js要先执行
     var html = [];

@@ -345,6 +345,7 @@ window.navSelected = function (navObj) {
 
 // 字符省略
 window.omission = function(str,index) {
-    if(str.length<=index) return str;
+    str = str + '';
+    if(!str || str.length<=index) return str;
     else return str.slice(0,index-1) + '...';
 };
