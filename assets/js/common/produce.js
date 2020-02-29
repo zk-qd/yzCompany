@@ -13,35 +13,40 @@
 
     // 根据导航显示哪些内容
     if (index == -1) {
-        produce.forEach(function (item) {
-            var children = item.children;
-            if (children) {
-                children.forEach(function (citem) {
-                    produceShow.push(citem);
-                });
-            }
-
-        });
+        produceShow = produce;
     } else if (produce[index]) {
-        produceShow = produce[index].children;
+        produceShow = [produce[index]];
     } else {
         location.href = './index.html';
     }
     produceShow.forEach(function (item, index) {
-        if (item.type == 1) {
-            html.push(
-                "<li data-index='" + index + "'>" +
-                "<a href='javascript:void(0)' class='cSkip' title='" + item.title + "'>" +
-                " <figure class='pdc-dynamic'>" +
-                " <mark class='pdc-mask'></mark>" +
-                "<img src='" + item.img + "' alt='" + item.title + "' title='" + item.title + "'>" +
-                "<figcaption class='text-color-2'>" + item.title + "</figcaption>" +
-                "</figure>" +
-                " </a>" +
-                "</li>"
-            );
-        };
+        var children = item.children;
+        html.push(
+            "<h2>" + item.title + "</h2>" +
+            "<ul class='clearfix'>"
+        )
+        children.forEach(function (item, index) {
+            if (item.type == 1) {
+
+                html.push(
+                    "<li data-index='" + index + "'>" +
+                    "<a href='javascript:void(0)' class='cSkip' title='" + item.title + "'>" +
+                    " <figure class='pdc-dynamic'>" +
+                    " <mark class='pdc-mask'></mark>" +
+                    "<img src='" + item.img + "' alt='" + item.title + "' title='" + item.title + "'>" +
+                    "<figcaption class='text-color-2'>" + item.title + "</figcaption>" +
+                    "</figure>" +
+                    " </a>" +
+                    "</li>"
+                );
+            };
+
+        })
+        html.push(
+            "</ul>"
+        )
     });
+
     pdcDom.innerHTML = html.join('').trim();
 
     // 点击跳转
@@ -177,11 +182,14 @@
                         h4 +
                         "<div class='pdci-content'>"
                     );
+
                     var list = item.list;
+                    var indent = item.indent;
+                    // var spacing = item.spacing;
                     // 内容
                     list.forEach(function (item) {
                         contentHtml.push(
-                            "<p class='text-color-2'>" + item + "</p>"
+                            "<p class='text-color-2' " + (indent ? "style='text-indent: " + indent * 16 + 'px' + ";" : '') + "'>" + item + "</p>"
                         )
                     });
                     contentHtml.push(
@@ -295,7 +303,7 @@
                                     contentHtml.push(
                                         "<tr>" +
                                         "<td rowspan='" + rowspan + "' class='pdci-rhead'>" + value + "</td>" +
-                                        "<td class='pdci-rcontent1'>" + citem.value + "</td>" 
+                                        "<td class='pdci-rcontent1'>" + citem.value + "</td>"
                                     );
                                     contentHtml.push(
                                         "</tr>"
