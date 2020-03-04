@@ -34,9 +34,18 @@
     <footer class='footer'>
        
     </footer>
-   
-    <script src="./assets/js/common/nav.js"></script>
-    <script src="./assets/js/context/schemeData.js"></script>
-    <script src="./assets/js/common/produce.js"></script>
+    <script src="./assets/js/common/nav.js" async></script>
+    <script src="./assets/js/context/schemeData.js" async></script>
+    <script src="./assets/js/common/list.js" async></script>
+    <script>
+        window.onload = function() {
+            listRender(schemeData, {
+                container: '.pdc-list',
+                nindex: window.navObj.index,
+                url: './sinfo.html?nav=',
+                category: 'scheme',
+            })
+        }
+    </script>
 </body>
 </html>

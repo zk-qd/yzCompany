@@ -86,6 +86,10 @@
 .header .hd-produce>ul{
   width: 120%;
 }
+/* 新闻资讯 单独宽度 */
+.header .hd-news>ul{
+  width: 120%;
+}
 
 .header .hd-navp > li > h3 {
   height: 100%;

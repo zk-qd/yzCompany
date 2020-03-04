@@ -34,6 +34,7 @@
 }
 #page-serial-a .page-equal:hover {
     background-color: #FF8200;
+    color: white;
 }
 #page-serial-a .page-prev,
 #page-serial-a .page-next {

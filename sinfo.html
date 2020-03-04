@@ -80,12 +80,13 @@
 
     </footer>
 
-    <script src="./assets/js/common/nav.js"></script>
-    <script src="./assets/js/context/schemeData.js"></script>
-    <script src="./assets/js/common/produce.js"></script>
+    <script src="./assets/js/common/nav.js" async></script>
+    <script src="./assets/js/context/schemeData.js" async></script>
+    <script src="./assets/js/common/detail.js" async></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js" async></script>
     <script>
         window.onload = function () {
+            detailRender();
             // 设置轮播图的高度
             var container = document.getElementsByClassName('swiper-container')[0];
             var containerLength = window.produceShowLength;

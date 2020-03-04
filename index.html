@@ -122,9 +122,9 @@
     <script src="./assets/js/common/nav.js" async></script>
     <script src="./assets/js/context/produceData.js" async></script>
     <script src="./assets/js/context/schemeData.js" async></script>
-    <script src="./assets/js/common/index.js" defer></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-    <!-- <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js" defer></script> -->
+    <script src="./assets/js/context/newsData.js" async></script>
+    <script src="./assets/js/common/list.js" async></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js" async></script>
     <script>
         window.addEventListener('load', function (e) {
             var mySwiper = new Swiper('.swiper-container', {
@@ -145,25 +145,51 @@
                 //     el: '.swiper-scrollbar',
                 // },
             });
-            indexListRender(schemeData, {
+            listRender(newsData, {
+                container: '.pdc-list',
+                title: '新闻中心',
+                subtext: 'press center',
+                nindex: 0,
+                url: './ninfo.html?nav=',
+                moreUrl: './news.html?nav=0',
+                more: true,
+                category: 'index',
+                cname: 'news-cSkip',
+                moreCName: 'news-more',
+            })
+            listRender(schemeData, {
+                container: '.pdc-list',
                 title: '解决方案',
                 subtext: 'solution',
-                index: -1,
+                nindex: -1,
                 url: './sinfo.html?nav=',
                 moreUrl: './scheme.html?nav=-1',
                 more: true,
+                category: 'special',
+                cname: 'scheme-cSkip',
+                moreCName: 'scheme-more',
             })
-            indexListRender(produceData, {
+            listRender(produceData, {
+                // 容器选择器
+                container: '.pdc-list',
+                // 标题
                 title: '产品中心',
+                // 副标题
                 subtext: 'Product Center',
                 // 单个跳转nav
-                index: -1,
+                nindex: -1,
                 // 单个跳转连接
                 url: './pinfo.html?nav=',
                 // 更多跳转连接
-                moreUrl: './produce.html?nav=-1',
+                moreUrl: './produce.html?nav=0',
                 // 是否显示更多跳转
                 more: true,
+                // 页面类别
+                category: 'index',
+                // 单个跳转类名
+                cname: 'produce-cSkip',
+                // 更多跳转选择器
+                moreCName: 'produce-more',
             })
         });
     </script>

@@ -8,9 +8,10 @@ var schemeData = [
         children: [
             {
                 title: '城市综合交通运行监测(TOCC)',
-                img: './assets/img/produce/army2.jpg',
-                image: ['./assets/img/produce/army2.jpg'],
+                img: './assets/img/scheme/index/1.png',
+                //image: ['./assets/img/produce/army2.jpg'],
                 type: 1,
+                summary: '确保道路安全，全力排除安全隐患，完善保障措施。强化重点路段安全管理，规范大件运输车辆的监护，强化危化品运输车辆的安检，坚决杜绝垮桥、危化事故发生。加强施工现场的交通安全管理，落实安全防范措施，提供管理手段。',
                 feature: [{
                     title: '方案介绍',
                     content: [
@@ -94,9 +95,10 @@ var schemeData = [
             },
             {
                 title: '城市公交行业监管解决方案',
-                img: './assets/img/produce/army2.jpg',
-                image: ['./assets/img/produce/army2.jpg'],
+                img: './assets/img/scheme/index/2.png',
+                //image: ['./assets/img/produce/army2.jpg'],
                 type: 1,
+                summary: '城市公交行业监管解决方案是通过人工智能，大数据，云计算，以及物联网等技术，重点结合交通运输职能部门职责与监管业务需求，建设一系列业务应用系统。实现公交基础信息管理、车辆定位及视频动态数据管理、服务监督信息管理、安全应急信息管理、里程补贴计算管理、运行效率分析、违规行为分析、综合信息统计与可视化查询展现、企业平台上线情况监管等业务功能，面向公交企业提供监督问题查看与处理应用服务，从而有效提高交通运输局公交监管的信息化水平，提高职能部门办事效率，为公众出行提供更为便捷公交信息服务。',
                 feature: [{
                     title: '方案介绍',
                     content: [
@@ -143,9 +145,10 @@ var schemeData = [
             },
             {
                 title: '城市公交企业运营管理解决方案',
-                img: './assets/img/produce/army2.jpg',
-                image: ['./assets/img/produce/army2.jpg'],
+                img: './assets/img/scheme/index/3.png',
+                //image: ['./assets/img/produce/army2.jpg'],
                 type: 1,
+                summary: '城市公交企业运营管理方案是运用人脸识别，辅助驾驶，自动程序设计，智能控制等人工智能技术，以及GPS/北斗定位技术、5G通信技术、物联网，云计算，大数据等技术，以增强公交公司综合监管和决策分析能力、提高公交车服务质量和水平为宗旨，结合公交公司发展的特点，以公交监管、运营调度以及社会公众的需求为导向，务求实效，整合公司管理各类业务信息资源，建设公交智能调度系统，对线路、车辆进行系统自行智能规划调度，真正实现自动智能排班、智能调度，节省人力成本，提高公交车辆的准点率以及利用率。人工智能与公交行业相结合是未来公共交通发展的必然模式。',
                 feature: [{
                     title: '方案介绍',
                     content: [
@@ -193,9 +196,10 @@ var schemeData = [
             },
             {
                 title: '城市出租/约租行业监管解决方案',
-                img: './assets/img/produce/army2.jpg',
-                image: ['./assets/img/produce/army2.jpg'],
+                img: './assets/img/scheme/index/4.png',
+                //image: ['./assets/img/produce/army2.jpg'],
                 type: 1,
+                summary: '互联网企业推出的网约车服务，在满足社会公众多样化、差异性出行需求的同时也对出租汽车市场造成了不公平竞争。在这些新情况和新问题的背景下，需要通过建设出租车综合监管平台，提升城市巡游出租车和网约车监管服务水平，规范市场机制，构建安全、高效的出租车市场环境，以满足人民群众个性化、差异化、多元化的出行需求。',
                 feature: [{
                     title: '方案介绍',
                     content: [
@@ -232,9 +236,10 @@ var schemeData = [
             },
             {
                 title: '出租约租企业运营管理解决方案',
-                img: './assets/img/produce/army2.jpg',
-                image: ['./assets/img/produce/army2.jpg'],
+                img: './assets/img/scheme/index/5.png',
+                //image: ['./assets/img/produce/army2.jpg'],
                 type: 1,
+                summary: '一些互联网企业陆续推出网络预约出租汽车服务，对于满足社会公众多样化、差异性出行需求发挥了积极作用。面对新一代信息技术的发展与相关行业的快速渗透，行业监管部门要顺应新技术和新应用的发展趋势，从促进产业发展和满足消费者不断变化的需求出发，创新监管方式与制定新的监管政策，推进行业转型升级，积极鼓励和推动巡游车和网约车融合发展。网约车车辆智能监控管理系统以满足人民群众个性化、差异化、多元化的出行需求。',
                 feature: [{
                     title: '方案介绍',
                     content: [
@@ -280,9 +285,10 @@ var schemeData = [
             },
             {
                 title: '重点车辆联网联控解决方案',
-                img: './assets/img/produce/army2.jpg',
-                image: ['./assets/img/produce/army2.jpg'],
+                img: './assets/img/scheme/index/6.png',
+                //image: ['./assets/img/produce/army2.jpg'],
                 type: 1,
+                summary: '确保道路安全，全力排除安全隐患，完善保障措施。强化重点路段安全管理，规范大件运输车辆的监护，强化危化品运输车辆的安检，坚决杜绝垮桥、危化事故发生。加强施工现场的交通安全管理，落实安全防范措施，提供管理手段。',
                 feature: [{
                     title: '方案介绍',
                     content: [
@@ -321,9 +327,10 @@ var schemeData = [
         children: [
             {
                 title: '指挥作战大厅解决方案',
-                img: './assets/img/produce/army2.jpg',
-                image: ['./assets/img/produce/army2.jpg'],
+                img: './assets/img/scheme/index/7.png',
+                //image: ['./assets/img/produce/army2.jpg'],
                 type: 1,
+                summary: '为使部队在执勤、处突等任务中能及时准确的传达信息，监控现场（目标）状况，快速下达指挥命令，更好的履行维护社会安全稳定的神圣使命。该系统综合利用当前世界最新进的IP通信技术、计算机网络技术、视频图像技术、数据库技术，使现场信息、资源分布、指挥决策充分融合，形成一体化的处置能力。',
                 feature: [{
                     title: '方案介绍',
                     content: [
@@ -358,8 +365,9 @@ var schemeData = [
 
            {
                 title: '作战培训室解决方案',
-                img: './assets/img/produce/army2.jpg',
-                image: ['./assets/img/produce/army2.jpg'],
+                img: './assets/img/scheme/index/8.png',
+                //image: ['./assets/img/produce/army2.jpg'],
+                summary: '主要在局域网络上利用网络信息技术以及多媒体教学广播系统，是一款实现在电子教室、多媒体网络教室或者电脑教室中进行多媒体网络教学的非常好的软件产品，集电脑教室的同步教学、控制、管理、音视频广播、网络考试等功能于一体，并能同时实现屏幕监视和远程控制等网络管理的目的。',
                 type: 1,
                 feature: [{
                     title: '方案介绍',
@@ -567,8 +575,9 @@ var schemeData = [
             },
            {
                 title: '军队综合机房解决方案',
-                img: './assets/img/produce/army2.jpg',
-                image: ['./assets/img/produce/army2.jpg'],
+                img: './assets/img/scheme/index/9.png',
+                //image: ['./assets/img/produce/army2.jpg'],
+                summary: '随着计算机的发展和网络的广泛应用，越来越多的单位都建立了自己的局域网，而这其中很重要的一个环节就是网络中心机房的建设。它不仅集建筑、电气、安装、网络等多个专业技术于一体，更需要丰富的工程实施和管理经验。机房设计与施工的优劣直接关系到机房内计算机系统是否能稳定可靠地运行，是否能保证各类信息通讯畅通无阻。',
                 type: 1,
                 feature: [{
                     title: '方案介绍',
@@ -604,9 +613,10 @@ var schemeData = [
             },
            {
                 title: '军队远程视频会议解决方案',
-                img: './assets/img/produce/army2.jpg',
-                image: ['./assets/img/produce/army2.jpg'],
+                img: './assets/img/scheme/index/10.png',
+                //image: ['./assets/img/produce/army2.jpg'],
                 type: 1,
+                summary: '视频会议解决方案是一种让身处异地的人们通过某种传输介质实现“实时、可视、交互”的多媒体通讯技术。它可以通过现有的各种电气通讯传输媒体，将人物的静态和动态图像、语音、文字、图片等多种信息分送到各个用户的终端设备上，使得在地理上分散的用户可以共聚一处，通过图形、声音等多种方式交流信息，增加双方对内容的理解能力，使人们犹如身临其境参加在同一会场中的会议一样。',
                 feature: [{
                     title: '方案介绍',
                     content: [
@@ -654,9 +664,10 @@ var schemeData = [
             },
            {
                 title: '军队智能电子沙盘建设解决方案',
-                img: './assets/img/produce/army2.jpg',
-                image: ['./assets/img/produce/army2.jpg'],
+                img: './assets/img/scheme/index/11.png',
+                //image: ['./assets/img/produce/army2.jpg'],
                 type: 1,
+                summary: '电子沙盘是采用地理信息技术、军事仿真技术、智能显控技术等开发的智能化作战仿真推演系统。系统紧贴部队指挥训练需要，支持多数据、多样式二三维战场环境展现，支持兵要、目标等战场情报综合查询，支持北斗、音视频等动态数据接入显示，支持二三维标绘作业，支持决心方案录入与量化计算评估，支持作战行动计划仿真推演，为各级首长机关勘察战场、研判敌情、研讨问题、推演战法、指挥处置等提供技术平台支撑。',
                 feature: [{
                     title: '方案介绍',
                     content: [
@@ -719,9 +730,10 @@ var schemeData = [
             },
            {
                 title: '智慧军营建设解决方案',
-                img: './assets/img/produce/army2.jpg',
-                image: ['./assets/img/produce/army2.jpg'],
+                img: './assets/img/scheme/index/12.png',
+                //image: ['./assets/img/produce/army2.jpg'],
                 type: 1,
+                summary: '随着军队系统信息化建设步调加快，对营区现代化信息化管理的要求更加迫切，数字化营区应运而生。数字化营区管理系统包括车辆管理系统、人员考勤及人脸识别系统、电子巡更系统、周界防范系统、视频监控系统，是面向各级部队营院内部人员车辆及周界安全管理的综合的综合管控系统。该系统针对营区及武器库等重点地区进行巡更确认，强化意外事故处理能力；保障营区安全实现报警系统和视频监控系统的交互服务；集硬件、软件、网络于一体的大型联网监控系统，在监控中心实现对营区现场的全方位管理需求。',
                 feature: [{
                     title: '方案介绍',
                     content: [
@@ -853,8 +865,9 @@ var schemeData = [
         children: [
             {
                 title: '校园公共广播解决方案',
-                img: './assets/img/produce/army2.jpg',
-                image: ['./assets/img/produce/army2.jpg'],
+                img: './assets/img/scheme/index/13.png',
+                //image: ['./assets/img/produce/army2.jpg'],
+                summary: '校园广播的功能需求是全自动播放校园背景音乐、上下课铃声、课间操；根据年级、班级不同，可不同节目同时播放，进行语音教育和听力考试；学校广播站播报文稿、广播找人、发布校园通知和信息等；有些学校有紧急广播的功能要求。',
                 type: 1,
                 feature: [{
                     title: '方案介绍',
@@ -1005,8 +1018,9 @@ var schemeData = [
             },
             {
                 title: '精品课堂全自动录播解决方案',
-                img: './assets/img/produce/army2.jpg',
-                image: ['./assets/img/produce/army2.jpg'],
+                img: './assets/img/scheme/index/14.png',
+                //image: ['./assets/img/produce/army2.jpg'],
+                summary: '精品课堂录播解决方案，基于大数据、物联网、学习分析、AI等技术，将智慧教学、智慧管理、智慧评估融合在一起，帮助学校充分整合优质资源和先进技术，构建先进、高效、实用的“智慧教室”。',
                 type: 1,
                 feature: [{
                     title: '方案介绍',
@@ -1039,9 +1053,10 @@ var schemeData = [
             },
             {
                 title: '在线课堂/互动课堂解决方案',
-                img: './assets/img/produce/army2.jpg',
-                image: ['./assets/img/produce/army2.jpg'],
+                img: './assets/img/scheme/index/15.png',
+                //image: ['./assets/img/produce/army2.jpg'],
                 type: 1,
+                summary: '智慧教室整体解决方案，是结合软硬件、教学空间、教研服务一体化设计方案，以教室为核心场景，以服务教学为核心任务，以提升高校教学效果为目标，打造线上',
                 feature: [{
                     title: '方案介绍',
                     content: [
@@ -1087,9 +1102,10 @@ var schemeData = [
             },
             {
                 title: '智慧宿管解决方案',
-                img: './assets/img/produce/army2.jpg',
-                image: ['./assets/img/produce/army2.jpg'],
+                img: './assets/img/scheme/index/16.png',
+                //image: ['./assets/img/produce/army2.jpg'],
                 type: 1,
+                summary: '本方案利用人脸活体识别技术、电子门禁技术、现代互联网技术等，采用了人脸识别通行系统，使用摄像头搭配显示屏的方案，无障碍的“非配合式”快速通行使得出入住宿区更高效，同时限制了陌生人闯入，为用户提供了高效、安静、安全的办公环境。',
                 feature: [{
                     title: '方案介绍',
                     content: [

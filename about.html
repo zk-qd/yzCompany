@@ -39,14 +39,14 @@
                         <i class='abt-dot'></i>
                         <a href="#" title="企业文化">企业文化</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <i class='abt-dot'></i>
                         <a href="#" title="组织架构">组织架构</a>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                         <i class='abt-dot'></i>
                         <a href="#" title="资质荣誉">资质荣誉</a>
-                    </li>
+                    </li> -->
                 </ul>
             </aside>
             <section class='abt-right about-content-nav'>
@@ -76,7 +76,7 @@
                         </div>
                     </li>
                 </ul>
-                <ul>
+                <!-- <ul>
                     <li>
                         <div class='abt-top'>
                             <h1 title="组织架构">组织架构</h1>
@@ -85,8 +85,8 @@
                             <img src="./assets/img/about/organization.jpg" alt="组织架构" title="组织架构">
                         </div>
                     </li>
-                </ul>
-                <ul>
+                </ul> -->
+                <!-- <ul>
                     <li>
                         <div class='abt-top'>
                             <h1 title="资质荣誉">资质荣誉</h1>
@@ -97,15 +97,19 @@
                             亚哲科技公司一直致力于为政府、税务、教育、军队、医疗、企业等客户
                         </div>
                     </li>
-                </ul>
+                </ul> -->
             </section>
         </div>
     </main>
     <footer class='footer'>
        
     </footer>
-    <script src="./assets/js/common/nav.js"></script>
-    <script src="./assets/js/common/about.js"></script>
-    <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js" defer></script>
+    <script src="./assets/js/common/nav.js" async></script>
+    <script src="./assets/js/common/aside.js" async></script>
+    <script>
+        window.onload = function() {
+            asideOperation();
+        }
+    </script>
 </body>
 </html>

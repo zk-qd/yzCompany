@@ -1,0 +1,158 @@
+.ctt-rec>p {
+    text-align: left !important;
+    text-indent: 0 !important;
+    font-size: 20px;
+    line-height: 50px;
+    color: #212121;
+}
+/* 错误 信息*/
+.ctt-leave-message p {
+    line-height: 30px;
+    display: none;
+    padding-left: 120px;
+    color: red;
+}
+.ctt-leave-message input:not([type=radio]) {
+    border: 1px solid #f0f0f0;
+    width: 333px;
+    color: #777777;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px!important;
+    vertical-align: middle;
+    font-family: 微软雅黑;
+    font-size: 14px;
+}
+.ctt-leave-message input[type=radio] {
+    height: 30px;
+    line-height: 30px;
+    margin-left: 15px;
+    font-family: 微软雅黑;
+    color: #777777;
+}
+.ctt-leave-message input:focus {
+    border: 1px solid #03a9f4;
+}
+.ctt-leave-message textarea {
+    border: 1px solid #f0f0f0;
+    width: 333px;
+    color: #777777;
+    padding: 5px 15px;
+    font-family: 微软雅黑;
+    font-size: 14px;
+    resize: none;
+}
+.ctt-leave-message textarea:focus {
+    border: 1px solid #03a9f4;
+}
+.ctt-leave-message span {
+    font-size: 15px;
+    color: #666;
+    text-align: right;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    width: 100px;
+    padding: 0 10px; 
+    font-family: 微软雅黑;
+}
+.ctt-leave-message>div {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+.ctt-leave-message i {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    color: white;
+    background-color: #03a9f4;
+    font-size: 16px;
+    border-radius: 2px;
+    margin-left: 120px;
+    margin-top: 50px;
+    font-family: 微软雅黑;
+    text-align: center;
+}
+
+.ctt-leave-message i:hover {
+    box-shadow: 0px 0px 3px #12121222;
+    background-color: #B3E5FC;
+}
+
+/* 地图 */
+#container {
+    width: 100%;
+    height: 500px;
+}
+
+.ctt-map>p {
+    font-family: 微软雅黑;
+    margin-top: 20px;
+    text-indent: 0 !important; 
+}
+
+#map-win {
+    width: 300px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0px 0px 3px #12121222;
+    position: relative;
+    height: 120px;
+}
+#map-win>h3 {
+    color: #03a9f4;
+    line-height: 50px;
+}
+#map-win>p {
+    line-height: 130%;
+}
+#map-win::before {
+    content: '';
+    position: absolute;
+    background-color: white;
+    z-index: 99;
+    transform: translateX(-50%),translateX(10px);
+    bottom: -20px;
+    left: 50%;
+    background-color: transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid white;
+    border-left: 10px solid white;
+}
+#map-win span {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    transition: all 200ms linear 0s;
+    font-size: 20px;
+    z-index: 99;
+}
+#map-win span:hover {
+    font-size: 25px;
+    color: #03a9f4;
+}
+.rec-link p {
+    text-indent: 0 !important;
+}
+
+
+/* 暗示 */
+.hint {
+    width: 200px;
+    height: 40px;
+    background: #03a9f4;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px #12121222;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    font-size: 18px;
+    color: white;
+}

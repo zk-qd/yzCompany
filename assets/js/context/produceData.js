@@ -2,15 +2,15 @@ var infoHref = './pinfo.html?nav=';
 var dataname = 'produceData';
 var produceData = [
     {
-        title: '公交设备',
+        title: '交通产品',
         subtext: 'Public transport equipment',
         children: [
             {
                 title: '公交车载主机',
-                img: './assets/img/scheme/traffic/2.2.png',
+                img: './assets/img/produce/list/1.png',
                 image: ['./assets/img/produce/bus1.jpg'],
                 type: 1,
-                summary: '内置海思高性能图像处理芯片，H.264编码，高压缩比，图像清晰支持8路AHD百万高清/模拟标清视音频输入，1路视音频同步输出,1路VGA输出',
+                summary: '内置海思高性能图像处理芯片，H.264编码，高压缩比，图像清晰支持8路AHD百万高清/模拟标清视音频输入，1路视音频同步输出,1路VGA输出，支持8路1080N高清实时本地录像',
                 feature: [{
                     title: '产品功能特点',
                     content: [
@@ -456,21 +456,22 @@ var produceData = [
             },
             {
                 title: '公交车载司机操作屏',
-                img: './assets/img/scheme/traffic/2.2.png',
+                img: './assets/img/produce/list/2.png',
                 image: ['./assets/img/produce/bus2.1.jpg',
                     './assets/img/produce/bus2.2.jpg'],
                 type: 1,
+                summary: '内置全志 V40，四核 ARM Cortex A7 1.5 GHz,内存：DDR3 1GB，内置存储：EMMC 8G，屏幕类型：液晶模组,  a-Si TFT-LCD',
                 feature: [{
                     title: '产品功能特点',
                     content: [
                         {
                             title: '配置概述',
                             list: [
-                                '内置全志 V40，四核 ARM Cortex A7 1.5 GHz',
-                                '内存：DDR3 1GB',
-                                '内置存储：EMMC 8G',
-                                '屏幕类型：液晶模组,  a-Si TFT-LCD',
-                                '分辨率：1280(RGB)X800 [WXGA]',
+                                '内置全志 V40，四核 ARM Cortex A7 1.5 GHz',
+                                '内存：DDR3 1GB',
+                                '内置存储：EMMC 8G',
+                                '屏幕类型：液晶模组,  a-Si TFT-LCD',
+                                '分辨率：1280(RGB)X800 [WXGA]',
                                 'IMEI:设备上装有模拟唯一通信编码（IMEI），方便设备正常运行管理',
                             ]
                         },
@@ -478,7 +479,7 @@ var produceData = [
                             title: '电源',
                             list: [
                                 '输入电压范围：DC6V~36V',
-                                '规格输入电压：DC12V~24V',
+                                '规格输入电压：DC12V~24V',
                                 '输入过压保护：>36V',
                                 '输出电压：12V',
                                 '开机延时功能：可延时 15 秒开机！',
@@ -807,10 +808,15 @@ var produceData = [
             },
             {
                 title: '公交车载LED屏',
-                img: './assets/img/scheme/traffic/2.2.png',
-                image: ['./assets/img/produce/bus1.jpg'],
+                img: './assets/img/produce/list/3.png',
+                image: [
+                    './assets/img/produce/bus3.1.jpg',
+                    './assets/img/produce/bus3.2.jpg',
+                    './assets/img/produce/bus3.3.jpg',
+                    './assets/img/produce/bus3.4.jpg'
+                ],
                 type: 1,
-                summary: '公交车载LED屏',
+                summary: '通过RS485接口连接车载LED屏通过智能车载一体机控制车载LED屏显示内容，车载LED屏可实时显示线路信息、始发站、终点站信息、实时到站信息和车辆转向、刹车等信息，并支持文明用语、广告模式轮播模式',
                 feature: [{
                     title: '产品功能特点',
                     content: [
@@ -826,8 +832,8 @@ var produceData = [
             },
             {
                 title: '客流统计设备',
-                img: './assets/img/scheme/traffic/2.2.png',
-                image: ['./assets/img/produce/bus1.jpg'],
+                img: './assets/img/produce/list/4.png',
+                image: ['./assets/img/produce/bus4.1.jpg'],
                 type: 1,
                 summary: '采用领先的双目立体视觉技术，基于双镜头的立体摄像，获取目标的高度信息，结合智能跟踪算法分析行人的行为轨迹，从而精确计算出客流人数及行走方向',
                 feature: [{
@@ -1025,10 +1031,10 @@ var produceData = [
 
             {
                 title: '电子站牌',
-                img: './assets/img/scheme/traffic/2.2.png',
-                image: ['./assets/img/produce/bus1.jpg'],
+                img: './assets/img/produce/list/6.png',
+                image: ['./assets/img/produce/bus6.1.jpg'],
                 type: 1,
-                summary: '电子站牌',
+                summary: '采用高性能工业级无线模块，采用高性能工业级 32 位通信处理器，支持低功耗模式，包括休眠模式、定时上下线模式和定时开关机模式（仅特殊版本支持',
                 feature: [{
                     title: '产品功能特点',
                     content: [
@@ -1101,24 +1107,593 @@ var produceData = [
             },
         ]
     },
-    // {
-
-    // },
-    // {
-
-    // },
     {
-        title: '辅助驾驶设备',
+        title: '军队产品',
+        subtext: 'The military products',
+        children: [
+            {
+                title: '电子沙盘',
+                img: './assets/img/produce/list/10.png',
+                image: ['./assets/img/produce/army2.jpg'],
+                type: 1,
+                summary: '根据武警、部队、公安作战管理需求，以三维地理信息、部队部署、要图标绘等为基础支撑，深度开发强化信息查询、地形分析、三维立体模型标绘、三维动态军标标绘、态势演示、联网标图、动员数据、实时视频、北斗导航、实时语音、防恐防暴动态演示等主要功能，为指挥员处置应急突发事件、正确分析情况、判定态势定下决心，提供有力的支撑。',
+                feature: [{
+                    title: '产品概述',
+                    content: [
+                        {
+                            title: '',
+                            list: [
+                                '根据武警、部队、公安作战管理需求，以三维地理信息、部队部署、要图标绘等为基础支撑，深度开发强化信息查询、地形分析、三维立体模型标绘、三维动态军标标绘、态势演示、联网标图、动员数据、实时视频、北斗导航、实时语音、防恐防暴动态演示等主要功能，为指挥员处置应急突发事件、正确分析情况、判定态势定下决心，提供有力的支撑。'
+                            ]
+                        },
+                    ]
+                },
+                {
+                    title: '主要功能',
+                    content: [
+                        {
+                            title: '',
+                            list: [
+                                '多样手势交互',
+                                '电子地图数据本地化',
+                                '目标类型多样化',
+                                '三维（二维）军标、电子白板 标绘功能',
+                                '三维模型',
+                                '具备多点触摸测量功能',
+                                '动态军标、态势演示',
+                                '联网协同标图',
+                            ]
+                        },
+                    ]
+                }],
+            },
+        ]
+    },
+    {
+        title: '教育产品',
+        subtext: 'To rent/arrange to rent equipment',
+        children: [
+            {
+                title: '出租车车载设备主机',
+                img: './assets/img/produce/list/7.png',
+                image: [
+                    './assets/img/produce/ruc1.1.png',
+                    './assets/img/produce/ruc1.2.png',
+                    './assets/img/produce/ruc1.3.png',
+                ],
+                type: 1,
+                summary:'支持全网通讯，wifi通讯，蓝牙通讯,不对接驾驶行为分析仪时，采用人脸识别方式识别出已注册驾驶员和非法驾驶员,进入运营状态后，与计价器同步显示运营里程和金额',
+                feature: [{
+                    title: '产品功能特点',
+                    content: [
+                        {
+                            title: '通讯功能',
+                            list: [
+                                '支持全网通讯，wifi通讯，蓝牙通讯',
+                            ]
+                        },
+                        {
+                            title: '人脸识别功能',
+                            list: [
+                                '不对接驾驶行为分析仪时，采用人脸识别方式识别出已注册驾驶员和非法驾驶员',
+                            ]
+                        },
+                        {
+                            title: '计价器通讯功能',
+                            list: [
+                                '进入运营状态后，与计价器同步显示运营里程和金额',
+                            ]
+                        },
+                        {
+                            title: '合乘功能',
+                            list: [
+                                '根据GPS数据，同时为3组乘客计费并显示',
+                            ]
+                        },
+                        {
+                            title: '智能顶灯控制功能',
+                            list: [
+                                '控制智能顶灯分别显示有客、空车、暂停、合乘',
+                            ]
+                        },
+                        {
+                            title: '行车记录仪功能',
+                            list: [
+                                '连接对内摄像头，对外摄像头，能够同时对车内，车外进行视频录像，并能够回放',
+                            ]
+                        },
+                        {
+                            title: 'OBD数据采集器',
+                            list: [
+                                '关闭GPS，连接车辆OBD接口，车辆通过OBD接口数据计程',
+                            ]
+                        },
+
+
+
+                    ]
+                }],
+
+                parameter: [
+                    {
+                        title: '产品参数',
+                        thead: [
+                            {
+                                value: '名称',
+                            },
+                            {
+                                value: '参数',
+                            },
+
+                        ],
+                        tbody: [
+                            {
+                                value: '方案',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: 'MTK6737+四核+2G+16G+1080P+4G网络数据+6.86+白蓝TP+GPS外置有源天线',
+                                    },
+                                ]
+                            },
+
+                            {
+                                value: '网络频段',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '移动联通2G：GSM(B3和B5),联通3G：B1和B5，FDD：B1、B3、B5，TDD和TD-SCDMA',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '手机APP',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '车车助手',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '开机画面LOGO',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '客户LOGO',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '使用镜头数量',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '一录照车前，一录照车内',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '前视镜头型号',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: 'ps5250++++TRC2117',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '焦距',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: 'f=2.9mm',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '角度',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: 'D：142°；H：121°；V：64°',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '光圈',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: 'F=1.4',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '车内摄像头',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '走线',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '变焦（数字/光学)',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '不支持',
+                                    },
+                                ]
+                            },
+                            {
+                                value: 'LCD显示屏',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '6.86寸 1280x480 IPS',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '视频尺寸',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '前1920*1080P',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '视频格式',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: 'ts(加锁文件mp4）',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '拍照画面格式',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: 'JPG',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '麦克风/喇叭',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '内置',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '充电方式',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '使用宝马线:5V/3A',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '使用双路录像电流',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '550mA',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '电池容量',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '无',
+                                    },
+                                ]
+                            },
+                            {
+                                value: 'GPS',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '支持',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '导航',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '支持',
+                                    },
+                                ]
+                            },
+                            {
+                                value: 'Wi-Fi',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '支持',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '网络数据',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '支持',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '镜头旋转功能',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '支持',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '最大支持内存',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '32GB外接TF卡',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '停车监控',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '支持',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '远程控制',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '支持',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '直播功能',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '支持',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '碰撞加锁',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '支持',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '循环录像',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '无缝循环录像,不漏秒',
+                                    },
+                                ]
+                            },
+                            {
+                                value: 'WIFI热点',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '支持',
+                                    },
+                                ]
+                            },
+                            {
+                                value: 'GPS导航',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '支持',
+                                    },
+                                ]
+                            },
+                            {
+                                value: 'GPS轨迹',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '支持',
+                                    },
+                                ]
+                            },
+                            {
+                                value: 'FM发射',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '支持',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '自动倒车可视',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '支持',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '电子狗',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '支持固定数据播报',
+                                    },
+                                ]
+                            },
+                            {
+                                value: 'G-SENSOR',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '高/中/低/关闭',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '存储温度',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '（-25度至75度）',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '工作环境温度',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '（-20度至70度）',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '工作环境湿度',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '15~85%RH',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '默认光源频率',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '50Hz',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '按键定义',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '甩线一键报警按键，后排三个评价键，前车评价键在设备上做虚拟按键',
+                                    },
+                                ]
+                            },
+                            {
+                                value: 'ADAS',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '支持',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '人脸识别',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '支持',
+                                    },
+                                ]
+                            },
+                            {
+                                value: 'DMS',
+                                rowspan: 1,
+                                children: [
+                                    {
+                                        value: '支持',
+                                    },
+                                ]
+                            },
+                            {
+                                value: '扩展接口',
+                                rowspan: 8,
+                                children: [
+                                    {
+                                        value: '三路RS232，带5V可控电源输出，每录可带500MA负载',
+                                    },
+                                    {
+                                        value: '一路RS485',
+
+                                    },
+                                    {
+                                        value: '一路CAN接口',
+
+                                    },
+                                    {
+                                        value: '12V高清摄像电源输入，可带500MA负载',
+
+                                    },
+                                    {
+                                        value: '一路5PIN的航空头USB，带5V/2A输入',
+
+                                    },
+                                    {
+                                        value: '六路IO输入',
+
+                                    },
+                                    {
+                                        value: '一路里程脉冲输入',
+
+                                    },
+                                    {
+                                        value: '三路可以定义输出',
+
+                                    },
+                                ]
+                            },
+
+
+                        ]
+
+                    },
+
+
+                ]
+            }
+        ],
+    },
+    {
+        title: '人工智能产品',
         subtext: 'Driving aid',
         children: [
             {
-                title: '辅助驾驶设备',
-                img: './assets/img/produce/scheme1.1.png',
+                title: '辅助驾驶设配',
+                img: './assets/img/produce/list/9.png',
                 image: [
                     './assets/img/produce/scheme1.1.png',
                     './assets/img/produce/scheme1.2.png',
                 ],
                 type: 1,
+                summary: '前车碰撞预警（FCW）,车道偏离预警（LDW）,车距监控与预警（HMW）',
                 parameter: [
                     {
                         title: '产品功能特点',
@@ -1646,45 +2221,4 @@ var produceData = [
             }
         ],
     },
-    {
-        title: '军队产品',
-        subtext: 'The military products',
-        children: [
-            {
-                title: '电子沙盘',
-                img: './assets/img/produce/army2.jpg',
-                image: ['./assets/img/produce/army2.jpg'],
-                type: 1,
-                feature: [{
-                    title: '产品概述',
-                    content: [
-                        {
-                            title: '',
-                            list: [
-                                '根据武警、部队、公安作战管理需求，以三维地理信息、部队部署、要图标绘等为基础支撑，深度开发强化信息查询、地形分析、三维立体模型标绘、三维动态军标标绘、态势演示、联网标图、动员数据、实时视频、北斗导航、实时语音、防恐防暴动态演示等主要功能，为指挥员处置应急突发事件、正确分析情况、判定态势定下决心，提供有力的支撑。'
-                            ]
-                        },
-                    ]
-                },
-                {
-                    title: '主要功能',
-                    content: [
-                        {
-                            title: '',
-                            list: [
-                                '多样手势交互',
-                                '电子地图数据本地化',
-                                '目标类型多样化',
-                                '三维（二维）军标、电子白板 标绘功能',
-                                '三维模型',
-                                '具备多点触摸测量功能',
-                                '动态军标、态势演示',
-                                '联网协同标图',
-                            ]
-                        },
-                    ]
-                }],
-            },
-        ]
-    }
 ];

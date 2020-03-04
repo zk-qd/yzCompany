@@ -33,8 +33,18 @@
        
     </footer>
    
-    <script src="./assets/js/common/nav.js"></script>
-    <script src="./assets/js/context/produceData.js"></script>
-    <script src="./assets/js/common/produce.js"></script>
+    <script src="./assets/js/common/nav.js" async></script>
+    <script src="./assets/js/context/produceData.js" async></script>
+    <script src="./assets/js/common/list.js" async></script>
+    <script>
+        window.onload = function() {
+            listRender(produceData, {
+                container: '.pdc-list',
+                nindex: window.navObj.index,
+                url: './pinfo.html?nav=',
+                category: 'produce',
+            })
+        }
+    </script>
 </body>
 </html>

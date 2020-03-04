@@ -81,3 +81,48 @@
 
 
 
+/* 新闻详情 */
+.newsi {
+    width: 100%;
+    font-size: 16px;
+    color: #000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.newsi>h1 {
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+    font-weight: 600;
+ 
+}
+.newsi>h3 {
+    text-align: center;
+    height: 50px;
+    color: #999999;
+    font-family: 微软雅黑;
+    font-size: 13px;
+}
+.newsi>h3>em {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.newsi>.newsi-main>h4 {
+    line-height: 30px;
+}
+.newsi>.newsi-main>p {
+    text-indent: 32px;
+    letter-spacing: 0;
+    line-height: 170%;
+}
+.newsi .newsi-img {
+    text-align: center;
+    margin: 20px 0;
+}
+.newsi .newsi-img>div {
+    display: inline-block;
+}
+.newsi .newsi-img p {
+    text-align: left;
+    line-height: 30px;
+}

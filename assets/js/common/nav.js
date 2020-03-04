@@ -22,6 +22,7 @@
     // 判断是否是详情页
     if (fileName == 'pinfo') fileName = 'produce';
     if (fileName == 'sinfo') fileName = 'scheme';
+    if (fileName == 'ninfo') fileName = 'news';
     window.navObj = {
         index: nav,
         beforeIndex: 0,
@@ -29,7 +30,7 @@
     }
 }();
 
-//  导航栏选中
+//  导航栏选中 效果
 window.navSelected = function (navObj) {
     if (!navObj) navObj = window.navObj;
     var className = 'hd-' + navObj.fileName,
@@ -51,7 +52,6 @@ window.navSelected = function (navObj) {
     }
 
 };
-
 
 // 顶部导航
 (function (window, document) {
@@ -75,14 +75,14 @@ window.navSelected = function (navObj) {
                     title: '企业文化',
                     url: './about.html?nav=1',
                 },
-                {
-                    title: '组织架构',
-                    url: './about.html?nav=2',
-                },
-                {
-                    title: '资质荣誉',
-                    url: './about.html?nav=3',
-                },
+                // {
+                //     title: '组织架构',
+                //     url: './about.html?nav=2',
+                // },
+                // {
+                //     title: '资质荣誉',
+                //     url: './about.html?nav=3',
+                // },
             ]
         },
         {
@@ -91,24 +91,20 @@ window.navSelected = function (navObj) {
             url: './produce.html?nav=-1',
             children: [
                 {
-                    title: '公交设配',
+                    title: '交通产品',
                     url: './produce.html?nav=0',
                 },
                 {
-                    title: '出租/约租设备',
+                    title: '军队产品',
                     url: './produce.html?nav=1',
                 },
                 {
-                    title: '人脸识别系统',
+                    title: '教育产品',
                     url: './produce.html?nav=2',
                 },
                 {
-                    title: '辅助驾驶设备',
+                    title: '人工智能产品',
                     url: './produce.html?nav=3',
-                },
-                {
-                    title: '军队产品',
-                    url: './produce.html?nav=4',
                 },
             ]
         },
@@ -135,20 +131,20 @@ window.navSelected = function (navObj) {
             className: 'hd-news',
             title: '新闻资讯',
             url: './news.html?nav=0',
-            children: [
-                {
-                    title: '热点新闻',
-                    url: './news.html?nav=0',
-                },
-                {
-                    title: '企业动向',
-                    url: './news.html?nav=1',
-                },
-                {
-                    title: '行业新闻',
-                    url: './news.html?nav=2',
-                },
-            ]
+            // children: [
+            //     {
+            //         title: '交通行业新闻',
+            //         url: './news.html?nav=0',
+            //     },
+            //     {
+            //         title: '军队行业新闻',
+            //         url: './news.html?nav=1',
+            //     },
+            //     {
+            //         title: '教育行业新闻',
+            //         url: './news.html?nav=2',
+            //     },
+            // ]
         },
         {
             className: 'hd-contact',
@@ -165,11 +161,11 @@ window.navSelected = function (navObj) {
                 },
                 {
                     title: '招贤纳士',
-                    url: './contact.html?nav=3',
+                    url: './contact.html?nav=2',
                 },
                 {
                     title: '在线留言',
-                    url: './contact.html?nav=4',
+                    url: './contact.html?nav=3',
                 },
             ]
         },
@@ -238,9 +234,6 @@ window.navSelected = function (navObj) {
     window.navSelected();
 })(window, document);
 
-
-
-
 // 底部导航
 (function (window, document) {
     var footer = document.getElementsByClassName('footer')[0];
@@ -258,45 +251,30 @@ window.navSelected = function (navObj) {
                         <li>
                             <a href='./about.html?nav=1' title='企业文化' alt='企业文化'>企业文化</a>
                         </li>
-                        <li>
-                            <a href='./about.html?nav=2' title='组织架构' alt='组织架构'>组织架构</a>
-                        </li>
-                        <li>
-                            <a href='./about.html?nav=3' title='资质荣誉' alt='资质荣誉'>资质荣誉</a>
-                        </li>
                     </ul>
                     <ul class='ft-produce'>
                         <li>
                             <h3><span class='ft-border'>产品</span>中心</h3>
                         </li>
                         <li>
-                            <a href='./produce.html?nav=0' title='公交设备' alt='公交设备'>公交设备</a>
+                            <a href='./produce.html?nav=0' title='公交产品' alt='公交产品'>公交产品</a>
                         </li>
                         <li>
-                            <a href='./produce.html?nav=1' title='出租/约租设备' alt='出租/约租设备'>出租/约租设备</a>
+                            <a href='./produce.html?nav=1' title='出租/约租产品' alt='出租/约租产品'>出租/约租产品</a>
                         </li>
                         <li>
-                            <a href='./produce.html?nav=2' title='人脸识别系统' alt='人脸识别系统'>人脸识别系统</a>
+                            <a href='./produce.html?nav=2' title='军队产品' alt='军队产品'>军队产品</a>
                         </li>
                         <li>
-                            <a href='./produce.html?nav=3' title='辅助驾驶设备' alt='辅助驾驶设备'>辅助驾驶设备</a>
-                        </li>
-                        <li>
-                            <a href='./produce.html?nav=4' title='军队产品' alt='军队产品'>军队产品</a>
+                            <a href='./produce.html?nav=3' title='人工智能产品' alt='人工智能产品'>人工智能产品</a>
                         </li>
                     </ul>
                     <ul class='ft-news'>
                         <li>
-                            <h3><span class='ft-border'>新闻</span>资讯</h3>
+                            <h3><span class='ft-border'>新闻</span>中心</h3>
                         </li>
                         <li>
-                            <a href='./news.html?nav=0' title='热点新闻' alt='热点新闻'>热点新闻</a>
-                        </li>
-                        <li>
-                            <a href='./news.html?nav=1' title='企业动向' alt='企业动向'>企业动向</a>
-                        </li>
-                        <li>
-                            <a href='./news.html?nav=2' title='行业新闻' alt='行业新闻'>行业新闻</a>
+                            <a href='./news.html?nav=0' title='新闻资讯' alt='新闻资讯'>新闻资讯</a>
                         </li>
                     </ul>
                 </div>

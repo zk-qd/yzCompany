@@ -1,86 +1,5 @@
-// 渲染列表
-(function (window, document) {
-    var pdcDom = document.getElementsByClassName('pdc-list')[0];
-    // 不是产品页面
-    if (!pdcDom) return;
-    // 两个页面使用 produce和scheme除了数据不一样都是一样的
-    var produce = eval(dataname),
-        produceShow = [],
-        // nav.js要先执行
-        index = window.navObj.index;
-    var html = [];
-
-    // 根据导航显示哪些内容
-    if (index == -1) {
-        produceShow = produce;
-    } else if (produce[index]) {
-        produceShow = [produce[index]];
-    } else {
-        location.href = './index.html';
-    }
-    produceShow.forEach(function (item, index) {
-        var children = item.children;
-        html.push(
-            "<h2 title='"+item.title+"'>" + item.title + "</h2>" +
-            "<h3 title='"+item.subtext+"'>" + item.subtext + "</h3>" +
-            "<ul class='clearfix'>"
-        )
-        children.forEach(function (item, index) {
-            if (item.type == 1) {
-                html.push(
-                    "<li data-index='" + index + "'>" +
-                    "<a href='javascript:void(0)' class='cSkip' title='" + item.title + "'>" +
-                    "<figure class='pdc-dynamic'>" +
-                    "<mark class='pdc-mask'>"+item.title+"</mark>" +
-                    "<img src='" + item.img + "' alt='" + item.title + "' title='" + item.title + "'>" +
-                    "<figcaption class='text-color-2' title='"+ item.summary +"'>" + window.omission(item.summary,40) + "</figcaption>" +
-                    "</figure>" +
-                    " </a>" +
-                    "</li>"
-                );
-            };
-
-        })
-        html.push(
-            "</ul>"
-        )
-    });
-
-    pdcDom.innerHTML = html.join('').trim();
-
-    // 点击跳转
-    function cSkip() {
-        // a集合
-        var as = document.getElementsByClassName('cSkip');
-        var ecallback = {
-            handleEvent(e) {
-                switch (e.type) {
-                    case 'click':
-                        e.preventDefault();
-                        e.stopPropagation();
-                        var current = e.currentTarget;
-                        var cindex = current.parentElement.dataset.index;
-                        window.sessionStorage.setItem('produceIndex', cindex);
-                        window.location.href = infoHref + index;
-                        break;
-                }
-            }
-        }
-        for (var i = 0, length = as.length; i < length; i++) {
-            as[i].addEventListener('click', ecallback, {
-                capture: false,
-                once: false,
-                passive: false,
-            });
-        }
-    }
-    cSkip();
-
-})(window, document);
-
-
-// 详情页
-!function (window, document) {
+// 产品和解决方案 详情页
+function detailRender() {
 
     // 生成轮播图
     var banner = document.getElementsByClassName('aside-banner')[0]
@@ -134,30 +53,36 @@
     var right = document.getElementsByClassName('pdci-right')[0];
     if (!right) return;
     // 当前导航产品的索引
-    var produceIndex = window.sessionStorage.getItem('produceIndex');
+    var produceIndex = window.sessionStorage.getItem('cindex');
     var content = produceShow[produceIndex];
     var contentHtml = [];
     // 如果后面没有菜单 那么隐藏菜单 可以判断值是否为空然后 设置隐藏
     // 类型为1的右边渲染方式
     if (content.type == 1) {
-        //  一级菜单以及图片
-        var imgSrc = [];
-        var imgSum = content.image.length;
-        if (imgSum == 1) imgSum = 5 / 3;
-        if (imgSum == 2) imgSum = 5 / 2;
-        content.image.forEach(function (img, index) {
-            imgSrc.push(
-                "<img class='equalHeight' src='" + img + "' style='width: calc(100% / " + imgSum + ")' alt='" + content.title + "' title='" + content.title + "'>"
-            )
-        });
-        imgSrc = imgSrc.join('').trim();
+        // 一级标题啊
         contentHtml.push(
-            "<h1 class='pdci-title1 text-color-1' title='" + content.title + "'>" + content.title + "</h1>" +
-            "<div class='pdci-content-img segment'>" +
-            "<h3 class='pdci-title2 text-color-1' title='" + content.title + "'>产品图片</h3>" +
-            imgSrc +
-            "</div>"
+            "<h1 class='pdci-title1 text-color-1' title='" + content.title + "'>" + content.title + "</h1>"
         );
+        //  一级菜单以及图片
+        if (content.image) {
+            var imgSrc = [];
+            var imgSum = content.image.length;
+            if (imgSum == 1) imgSum = 5 / 3;
+            if (imgSum == 2) imgSum = 5 / 2;
+            content.image.forEach(function (img, index) {
+                imgSrc.push(
+                    "<img class='equalHeight' src='" + img + "' style='width: calc(100% / " + imgSum + ")' alt='" + content.title + "' title='" + content.title + "'>"
+                )
+            });
+            imgSrc = imgSrc.join('').trim();
+            contentHtml.push(
+                "<div class='pdci-content-img segment'>" +
+                "<h3 class='pdci-title2 text-color-1' title='" + content.title + "'>产品图片</h3>" +
+                imgSrc +
+                "</div>"
+            );
+        }
+
         // 要素以及二级菜单 
         var feature = content.feature;
         if (feature) {
@@ -402,12 +327,12 @@
                     // 上一页
                     var mark = current.dataset.mark;
                     if (mark == 'next') {
-                        window.sessionStorage.setItem('produceIndex', produceIndex - 0 + 1)
+                        window.sessionStorage.setItem('cindex', produceIndex - 0 + 1)
                     } else if (mark == 'prev') {
-                        window.sessionStorage.setItem('produceIndex', produceIndex - 0 - 1)
+                        window.sessionStorage.setItem('cindex', produceIndex - 0 - 1)
                     } else if (mark == 'assign') {
                         // 点击轮播跳转
-                        window.sessionStorage.setItem('produceIndex', current.parentElement.dataset.index);
+                        window.sessionStorage.setItem('cindex', current.parentElement.dataset.index);
                     }
                     location.href = infoHref + nIndex;
                     break;
@@ -422,6 +347,7 @@
             passive: false,
         })
     }
-}(window, document);
+}
+
 
 

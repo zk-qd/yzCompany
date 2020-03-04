@@ -1,7 +1,7 @@
 
 
 // 侧边栏 关于页面和联系我们页面
-(function (window, document) {
+function asideOperation(callback) {
     var aside = document.getElementsByClassName('aside-nav')[0];
     var content = document.getElementsByClassName('about-content-nav')[0];
     if (aside) {
@@ -24,7 +24,7 @@
                 // 切换active
                 lis[beforeIndex].classList.remove('active');
                 active.classList.add('active');
-                var contents = content.querySelectorAll('ul');
+                var contents = content.children;
                 contents[beforeIndex].classList.remove('active');
                 contents[index].classList.add('active');
                 // 选中导航
@@ -32,11 +32,11 @@
                     fileName: window.navObj.fileName,
                     index: index,
                     beforeIndex: beforeIndex,
-                })
-
+                });
+                if(callback) callback(index);
             }
         })
         // 导航栏处于点击状态
         aside.children[window.navObj.index].click();
     }
-})(window, document)
+}

@@ -50,7 +50,7 @@ function initialPage(options) {
     html();
     var callback = options.callback;
     // option必须是数字
-    var count = isNaN(options.count) && options.count ? Number(options.count) : 5;
+    var count = !isNaN(options.count) && options.count ? Number(options.count) : 5;
     function js() {
         var pageDom = document.getElementById('page-serial-a');
         // 首页
@@ -292,15 +292,15 @@ function contentRender(data) {
     var container = document.getElementsByClassName('news-content')[0];
     var content = data.datas;
     var html = [];
-    var template = function (item) {
-        return "<li class='clearfix'>" +
-            "<img class='news-content-left' src='" + item.image + "' title='" + item.title + "' alt='" + item.title + "'>" +
+    var template = function (item,cindex) {
+        return "<li class='clearfix newsSkip' data-cindex='"+cindex+"'>" +
+            "<img class='news-content-left' src='" + item.img + "' title='" + item.title + "' alt='" + item.title + "'>" +
             "<div class='news-content-right'>" +
             "<h3 title='" + item.title + "'>" + item.title + "</h3>" +
             "<h4 title='" + item.time + "'>" + item.time + "</h4>" +
-            "<div title='" + item.text + "'>" + window.omission(item.text,80) + "</div>" +
+            "<div title='" + item.summary + "'>" + window.omission(item.summary,80) + "</div>" +
             "<p>" +
-            "<a href='javascript:void(0)' class='newsSkip' title='查看详情'>查看详情</a>" +
+            "<a href='javascript:void(0)' title='查看详情'>查看详情</a>" +
             "</p>" +
             "</div>" +
             "</li>";
@@ -309,12 +309,36 @@ function contentRender(data) {
         "<ul>"
     );
     for (var ci = 0, clength = content.length; ci < clength; ci++) {
-        html.push(template(content[ci]));
+        html.push(template(content[ci],ci+data.count*(data.index-1)));
     }
     html.push(
         "</ul>"
     );
     container.innerHTML = html.join('').trim();
+
+    function newsSkip() {
+        var lis = document.getElementsByClassName('newsSkip');
+        var callback = {
+            handleEvent(e) {
+                switch(e.type) {
+                    case 'click':
+                        e.stopPropagation();
+                        e.preventDefault();
+                        window.sessionStorage.setItem('cindex',e.currentTarget.dataset.cindex);
+                        window.location.href = './ninfo.html?nav=0';
+                        break;
+                }
+            }
+        };
+        for(var i=0,length=lis.length;i<length;i++) {
+            lis[i].addEventListener('click',callback,{
+                once: false,
+                caption: false,
+                passive: false,
+            })
+        }
+    }
+    newsSkip()
 }
 
 // 总业务
@@ -324,7 +348,7 @@ function createPage(nIndex) {
         nums: 5,
         ellipsis: '...',
         container: '.news-page',
-        count: 8,
+        count: 5,
         // 扩展方式
         callback: function (page) {
             // 由于这里仅仅是本地数据 所以不需要异步
