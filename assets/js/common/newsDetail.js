@@ -13,7 +13,7 @@ function renderNewsDetail(data) {
         html.push("<h3>");
         var declared = data.declared;
         declared.forEach(function (item) {
-            html.push("<span>" + item.name + "</span>:<em>" + item.value + "</em>");
+            if(item.name && item.value) html.push("<span>" + item.name + "</span>:<em>" + item.value + "</em>");
         });
         html.push("<span>" + data.time + "</span>");
         html.push("</h3>");

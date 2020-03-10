@@ -156,16 +156,12 @@ window.navSelected = function (navObj) {
                     url: './contact.html?nav=0',
                 },
                 {
-                    title: '联系方式',
+                    title: '招贤纳士',
                     url: './contact.html?nav=1',
                 },
                 {
-                    title: '招贤纳士',
-                    url: './contact.html?nav=2',
-                },
-                {
                     title: '在线留言',
-                    url: './contact.html?nav=3',
+                    url: './contact.html?nav=2',
                 },
             ]
         },
@@ -288,20 +284,18 @@ window.navSelected = function (navObj) {
                         <li><span class='iconfont icon-adress'></span>地址:&nbsp;&nbsp;<em>广州市黄埔区科学大道50号绿地中央广场A3栋1806</em></li>
                     </ul>
                     <div>
-                        <img src='./assets/img/index/code1.png' alt="关注亚哲官方微信" title='关注亚哲官方微信'>
-                        <p>关注亚哲官方微信</p>
-                    </div>
-                    <div>
-                    <img src='./assets/img/index/code2.png' alt="关注亚哲官方微信" title='关注亚哲官方微信'>
+                        <img src='./assets/img/index/code.jpg' alt="关注亚哲官方微信" title='关注亚哲官方微信'>
                         <p>关注亚哲官方微信</p>
                     </div>
                 </div>
             </ul>
         </div>
         <div class='ft-bottom'>
-        COPYRIGHT© 2017-2021 © 广东亚哲科技股份有限公司 | 粤ICP备16104266号-1
+        COPYRIGHT© 2017-2021 © 亚哲股份科技有限公司 | 粤ICP备16104266号-1
         </div>
     `
+    // COPYRIGHT© 2017-2021 © 广东亚哲科技股份有限公司 | 粤ICP备16104266号-1
+
 })(window, document);
 
 // 返回顶层

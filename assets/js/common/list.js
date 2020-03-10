@@ -6,14 +6,18 @@ function listRender(data, config) {
     if (config.category == 'index') {
         var countLength = 0;
         data.forEach(function (item, index) {
-            // 获取子项的cindex
-            var cindex = Math.floor(item.children.length * Math.random());
-             // 随机每个子项放一个
-            var content = item.children[cindex];
-            // 将cindex保存到content中去
-            content.cindex = cindex + countLength;
-            countLength +=item.children.length;
-            show.push(content);
+            // 因为教育产品暂时没有
+            if (item.children.length) {
+                // 获取子项的cindex
+                var cindex = Math.floor(item.children.length * Math.random());
+                // 随机每个子项放一个
+                var content = item.children[cindex];
+                // 将cindex保存到content中去
+                content.cindex = cindex + countLength;
+                countLength += item.children.length;
+                show.push(content);
+            }
+
         });
         html.push(
             "<h2 title='" + config.title + "'>" + config.title + "</h2>" +
@@ -23,14 +27,14 @@ function listRender(data, config) {
         show.forEach(function (item) {
             if (item.type == 1) {
                 // 保证点击详情找到正确的
-                html.push(litemplate(item,item.cindex,config.cname));
-            } else if(item.type == 2) {
-                html.push(litemplate(item,item.cindex,config.cname));
+                html.push(litemplate(item, item.cindex, config.cname));
+            } else if (item.type == 2) {
+                html.push(litemplate(item, item.cindex, config.cname));
             };
         });
     } else if (config.category == 'produce' || config.category == 'scheme') {
-        if(config.nindex==-1) show = data;
-        else if(data[config.nindex]) show = [data[config.nindex]];
+        if (config.nindex == -1) show = data;
+        else if (data[config.nindex]) show = [data[config.nindex]];
         else window.location.href = './index.html';
         var countIndex = -1;
         show.forEach(function (item, index) {
@@ -43,32 +47,32 @@ function listRender(data, config) {
             children.forEach(function (item, index) {
                 countIndex++;
                 if (item.type == 1) {
-                    html.push(litemplate(item,countIndex));
+                    html.push(litemplate(item, countIndex));
                 };
             })
             html.push(
                 "</ul>"
             )
         });
-    } else if(config.category == 'special') {
+    } else if (config.category == 'special') {
         var countLength = 0;
         data.forEach(function (item, index) {
             // 获取子项的cindex
             var cindex = 0;
-             // 随机每个子项放一个
+            // 随机每个子项放一个
             var content = item.children[cindex];
             // 将cindex保存到content中去
             content.cindex = cindex + countLength;
-            countLength +=item.children.length;
-            if(index==0) {
+            countLength += item.children.length;
+            if (index == 0) {
                 content.title = '交通行业解决方案'
                 content.summary = '交通行业解决方案'
             }
-            if(index==1) {
+            if (index == 1) {
                 content.title = '军队行业解决方案'
                 content.summary = '军队行业解决方案'
             }
-            if(index==2) {
+            if (index == 2) {
                 content.title = '教育行业解决方案'
                 content.summary = '教育行业解决方案'
             }
@@ -82,28 +86,69 @@ function listRender(data, config) {
         show.forEach(function (item) {
             if (item.type == 1) {
                 // 保证点击详情找到正确的
-                html.push(litemplate(item,item.cindex,config.cname));
-            } else if(item.type == 2) {
-                html.push(litemplate(item,item.cindex,config.cname));
+                html.push(litemplate(item, item.cindex, config.cname));
+            } else if (item.type == 2) {
+                html.push(litemplate(item, item.cindex, config.cname));
+            };
+        });
+    } else if (config.category == 'single') {
+        // 如果只有一个分类 那一个分类强制分成3个
+        data.forEach(function (item, index) {
+            // 区间
+            var a = item.children.length / 3;
+            var b = item.children.length / 3 * 2;
+            var c = item.children.length;
+            // 获取子项的cindex
+            var cindex1 = Math.floor(a * Math.random());
+            var cindex2 = Math.floor((b - a) * Math.random() + a);
+            var cindex3 = Math.floor((c - b) * Math.random() + b);
+            // 随机每个子项放一个
+            var content1 = item.children[cindex1];
+            var content2 = item.children[cindex2];
+            var content3 = item.children[cindex3];
+            // 将cindex保存到content中去
+            content1.cindex = cindex1;
+            content2.cindex = cindex2;
+            content3.cindex = cindex3;
+            show.push(content1);
+            show.push(content2);
+            show.push(content3);
+        });
+        html.push(
+            "<h2 title='" + config.title + "'>" + config.title + "</h2>" +
+            "<h3 title='" + config.subtext + "'>" + config.subtext + "</h3>" +
+            "<ul class='clearfix'>"
+        );
+        show.forEach(function (item) {
+            if (item.type == 1) {
+                // 保证点击详情找到正确的
+                html.push(litemplate(item, item.cindex, config.cname));
+            } else if (item.type == 2) {
+                html.push(litemplate(item, item.cindex, config.cname));
             };
         });
     }
+
+
+
+
+
     html.push(
         "</ul>"
     )
     if (config.more)
         html.push(
             "<div class='pdc-more'>" +
-            "<a class='pdc-more-a "+config.moreCName+"'  href='javascript:void(0) title='查看更多'>查看更多</a>" +
+            "<a class='pdc-more-a " + config.moreCName + "'  href='javascript:void(0) title='查看更多'>查看更多</a>" +
             "</div>"
         );
     container.insertAdjacentHTML("afterbegin", html.join('').trim());
 
     // li结构
-    function litemplate(item,index,cname) {
-        if(!cname) cname = 'cSkip'
-           return "<li data-index='" + index + "'>" +
-            "<a href='javascript:void(0)' class='"+cname+"' title='" + item.title + "' data-title='"+item.title+"'>" +
+    function litemplate(item, index, cname) {
+        if (!cname) cname = 'cSkip'
+        return "<li data-index='" + index + "'>" +
+            "<a href='javascript:void(0)' class='" + cname + "' title='" + item.title + "' data-title='" + item.title + "'>" +
             "<figure class='pdc-dynamic'>" +
             "<mark class='pdc-mask'>" + item.title + "</mark>" +
             "<img src='" + item.img + "' alt='" + item.title + "' title='" + item.title + "'>" +
@@ -115,7 +160,7 @@ function listRender(data, config) {
     // 点击查看更多跳转
     function lookMore() {
         var moreCName = config.moreCName;
-        var as = document.querySelectorAll("."+moreCName);
+        var as = document.querySelectorAll("." + moreCName);
         var ecallback = {
             handleEvent(e) {
                 switch (e.type) {
@@ -142,7 +187,7 @@ function listRender(data, config) {
     function cSkip() {
         // a集合
         var cname = config.cname;
-        if(!cname) cname='cSkip'
+        if (!cname) cname = 'cSkip'
         var as = document.getElementsByClassName(cname);
         var ecallback = {
             handleEvent(e) {
@@ -155,13 +200,13 @@ function listRender(data, config) {
                         window.sessionStorage.setItem('cindex', cindex);
                         // nav强制等于-1显示所有 因为是从首页跳转的
                         console.log(config.url)
-                        if(config.category == 'special') {
+                        if (config.category == 'special') {
                             var title = current.dataset.title;
-                            if(title == '交通行业解决方案') {
+                            if (title == '交通行业解决方案') {
                                 window.location.href = './scheme.html?nav=0';
-                            } else if(title == '军队行业解决方案') {
+                            } else if (title == '军队行业解决方案') {
                                 window.location.href = './scheme.html?nav=1';
-                            } else if(title == '教育行业解决方案') {
+                            } else if (title == '教育行业解决方案') {
                                 window.location.href = './scheme.html?nav=2';
                             }
                         } else {

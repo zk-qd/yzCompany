@@ -19,7 +19,7 @@
 }
 .footer .ft-top>.ft-left {
     float: left;
-    width: 35%;
+    width: 40%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -47,11 +47,12 @@
 .footer .ft-top>.ft-right {
     height: 100%;
     float: right;
-    width: 65%;
+    width: 60%;
 }
 
 .footer .ft-top>.ft-right>ul {
-    padding: 0 40px;
+    /* padding: 0 40px; */
+    padding: 0px 70px 0 50px;
     float: left;
 }
 .footer .ft-top>.ft-right>ul>li {

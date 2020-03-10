@@ -3,7 +3,7 @@ var dataname = 'produceData';
 var produceData = [
     {
         title: '交通产品',
-        subtext: 'Public transport equipment',
+        subtext: 'traffic',
         children: [
             {
                 title: '公交车载主机',
@@ -1028,7 +1028,6 @@ var produceData = [
 
                 ]
             },
-
             {
                 title: '电子站牌',
                 img: './assets/img/produce/list/6.png',
@@ -1105,54 +1104,6 @@ var produceData = [
                 }]
 
             },
-        ]
-    },
-    {
-        title: '军队产品',
-        subtext: 'The military products',
-        children: [
-            {
-                title: '电子沙盘',
-                img: './assets/img/produce/list/10.png',
-                image: ['./assets/img/produce/army2.jpg'],
-                type: 1,
-                summary: '根据武警、部队、公安作战管理需求，以三维地理信息、部队部署、要图标绘等为基础支撑，深度开发强化信息查询、地形分析、三维立体模型标绘、三维动态军标标绘、态势演示、联网标图、动员数据、实时视频、北斗导航、实时语音、防恐防暴动态演示等主要功能，为指挥员处置应急突发事件、正确分析情况、判定态势定下决心，提供有力的支撑。',
-                feature: [{
-                    title: '产品概述',
-                    content: [
-                        {
-                            title: '',
-                            list: [
-                                '根据武警、部队、公安作战管理需求，以三维地理信息、部队部署、要图标绘等为基础支撑，深度开发强化信息查询、地形分析、三维立体模型标绘、三维动态军标标绘、态势演示、联网标图、动员数据、实时视频、北斗导航、实时语音、防恐防暴动态演示等主要功能，为指挥员处置应急突发事件、正确分析情况、判定态势定下决心，提供有力的支撑。'
-                            ]
-                        },
-                    ]
-                },
-                {
-                    title: '主要功能',
-                    content: [
-                        {
-                            title: '',
-                            list: [
-                                '多样手势交互',
-                                '电子地图数据本地化',
-                                '目标类型多样化',
-                                '三维（二维）军标、电子白板 标绘功能',
-                                '三维模型',
-                                '具备多点触摸测量功能',
-                                '动态军标、态势演示',
-                                '联网协同标图',
-                            ]
-                        },
-                    ]
-                }],
-            },
-        ]
-    },
-    {
-        title: '教育产品',
-        subtext: 'To rent/arrange to rent equipment',
-        children: [
             {
                 title: '出租车车载设备主机',
                 img: './assets/img/produce/list/7.png',
@@ -1678,12 +1629,134 @@ var produceData = [
 
 
                 ]
-            }
+            },
+
+            // 12
+            {
+                title: '车载报站屏',
+                img: './assets/img/produce/list/12.png',
+                type: 1,
+                summary: '',
+                feature: [{
+                    title: '产品概述',
+                    content: [
+                        {
+                            title: '',
+                            list: [
+                                ''
+                            ]
+                        },
+                    ]
+                }],
+            },
+            // 13
+            {
+                title: '出租车车顶LED屏',
+                img: './assets/img/produce/list/13.png',
+                type: 1,
+                summary: '',
+                feature: [{
+                    title: '产品概述',
+                    content: [
+                        {
+                            title: '',
+                            list: [
+                                ''
+                            ]
+                        },
+                    ]
+                }],
+            },
+            // 14
+            {
+                title: '4.2.3出租车计价器',
+                img: './assets/img/produce/list/14.png',
+                type: 1,
+                summary: '',
+                feature: [{
+                    title: '产品概述',
+                    content: [
+                        {
+                            title: '',
+                            list: [
+                                ''
+                            ]
+                        },
+                    ]
+                }],
+            },
+        ]
+    },
+    {
+        title: '军队产品',
+        subtext: 'army',
+        children: [
+            {
+                title: '电子沙盘',
+                img: './assets/img/produce/list/10.png',
+                image: ['./assets/img/produce/army2.jpg'],
+                type: 1,
+                summary: '根据武警、部队、公安作战管理需求，以三维地理信息、部队部署、要图标绘等为基础支撑，深度开发强化信息查询、地形分析、三维立体模型标绘、三维动态军标标绘、态势演示、联网标图、动员数据、实时视频、北斗导航、实时语音、防恐防暴动态演示等主要功能，为指挥员处置应急突发事件、正确分析情况、判定态势定下决心，提供有力的支撑。',
+                feature: [{
+                    title: '产品概述',
+                    content: [
+                        {
+                            title: '',
+                            list: [
+                                '根据武警、部队、公安作战管理需求，以三维地理信息、部队部署、要图标绘等为基础支撑，深度开发强化信息查询、地形分析、三维立体模型标绘、三维动态军标标绘、态势演示、联网标图、动员数据、实时视频、北斗导航、实时语音、防恐防暴动态演示等主要功能，为指挥员处置应急突发事件、正确分析情况、判定态势定下决心，提供有力的支撑。'
+                            ]
+                        },
+                    ]
+                },
+                {
+                    title: '主要功能',
+                    content: [
+                        {
+                            title: '',
+                            list: [
+                                '多样手势交互',
+                                '电子地图数据本地化',
+                                '目标类型多样化',
+                                '三维（二维）军标、电子白板 标绘功能',
+                                '三维模型',
+                                '具备多点触摸测量功能',
+                                '动态军标、态势演示',
+                                '联网协同标图',
+                            ]
+                        },
+                    ]
+                }],
+            },
+            // 11
+            {
+                title: '智能手机柜',
+                img: './assets/img/produce/list/11.png',
+                type: 1,
+                summary: '',
+                feature: [{
+                    title: '产品概述',
+                    content: [
+                        {
+                            title: '',
+                            list: [
+                                ''
+                            ]
+                        },
+                    ]
+                }],
+            },
+        ]
+    },
+    {
+        title: '教育产品',
+        subtext: 'education',
+        children: [
+          
         ],
     },
     {
         title: '人工智能产品',
-        subtext: 'Driving aid',
+        subtext: 'artificial intelligence',
         children: [
             {
                 title: '辅助驾驶设配',
@@ -2218,7 +2291,25 @@ var produceData = [
                         ],
                     },
                 ]
-            }
+            },
+            // 5
+            {
+                title: '人脸识别系统',
+                img: './assets/img/produce/list/5.png',
+                type: 1,
+                summary: '',
+                feature: [{
+                    title: '产品概述',
+                    content: [
+                        {
+                            title: '',
+                            list: [
+                                ''
+                            ]
+                        },
+                    ]
+                }],
+            },
         ],
     },
 ];
